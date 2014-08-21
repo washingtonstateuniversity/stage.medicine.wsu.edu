@@ -9,6 +9,9 @@ class WSU_Medicine_Shortcodes {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
 
+	/**
+	 * Enqueue scripts necessary for proper display of our animated charts.
+	 */
 	public function enqueue_scripts() {
 		global $post;
 
@@ -19,6 +22,12 @@ class WSU_Medicine_Shortcodes {
 		}
 
 	}
+
+	/**
+	 * Output the DIV used to display the medicine seats comparison.
+	 *
+	 * @return string HTML output
+	 */
 	public function display_wsu_medicine_seats_comparison() {
 		// Output the DIV element expected by the Edge script
 		$output = '<div id="Stage" class="EDGE-21518124"></div>';
