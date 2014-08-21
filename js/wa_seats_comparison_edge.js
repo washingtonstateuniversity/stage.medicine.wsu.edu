@@ -217,7 +217,7 @@
 			states: {
 				"Base State": {
 					"${_gray_text}": [
-						["style", "top", '281px'],
+						["style", "top", '297px'],
 						["style", "font-weight", '100'],
 						["color", "color", 'rgba(255,255,255,0.00)'],
 						["style", "font-family", 'OpenSans-Light, sans-serif'],
@@ -357,7 +357,7 @@
 						["style", "left", '57px']
 					],
 					"${_orange_text}": [
-						["style", "top", '90px'],
+						["style", "top", '105px'],
 						["style", "font-weight", '100'],
 						["color", "color", 'rgba(255,255,255,0.00)'],
 						["style", "font-family", 'OpenSans-Light, sans-serif'],
@@ -400,7 +400,7 @@
 						["style", "clip", [0,40,90,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ]
 					],
 					"${_blue_text}": [
-						["style", "top", '192px'],
+						["style", "top", '207px'],
 						["style", "font-weight", '100'],
 						["color", "color", 'rgba(255,255,255,0.00)'],
 						["style", "font-family", 'OpenSans-Light, sans-serif'],
