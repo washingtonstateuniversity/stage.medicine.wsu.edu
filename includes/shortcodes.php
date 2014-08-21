@@ -50,13 +50,15 @@ class WSU_Medicine_Shortcodes {
 	 */
 	public function display_wsu_medicine_seats_comparison() {
 		// Output the DIV element expected by the Edge script
-		$output = '<div id="Stage_comparison" class="EDGE-21518124"></div>';
+		$output = '<div id="seats_comparison_container" style="height: 300px;">
+				<div id="Stage_comparison" class="EDGE-21518124" style="height: 250px;"></div>
+			</div>';
 
 		return $output;
 	}
 
 	public function display_wsu_medicine_mi_wa_graph() {
-		$output = '<div id="Stage_graph" class="wa_mi_comparison"></div>';
+		$output = '<div id="mi_wa_graph_comtainer" style="height: 909px;"><div id="Stage_graph" class="wa_mi_comparison"></div></div>';
 
 		return $output;
 	}
