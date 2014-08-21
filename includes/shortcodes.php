@@ -7,6 +7,11 @@ class WSU_Medicine_Shortcodes {
 	public function __construct() {
 		add_shortcode( 'wsu_medicine_seats_comparison', array( $this, 'display_wsu_medicine_seats_comparison' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		add_action( 'wp_head', array( $this, 'head_style' ) );
+	}
+
+	public function head_style() {
+		?><style> .edgeLoad-EDGE-21518124 { visibility:hidden; } </style><?php
 	}
 
 	/**
