@@ -5,8 +5,7 @@
 //images folder
 	var im='http://wp.wsu.dev/wp-content/themes/medicine-dev/images/';
 
-	var fonts = {};    fonts['open-sans, sans-serif']='<script src=\"http://use.edgefonts.net/open-sans:n7,i7,n8,i8,i4,n3,i3,n4,n6,i6:all.js\"></script>';
-	fonts['open-sans-condensed, sans-serif']='<script src=\"http://use.edgefonts.net/open-sans-condensed:n7,n3,i3:all.js\"></script>';
+	var fonts = {};
 
 	var opts = {
 		'gAudioPreloadPreference': 'auto',
@@ -73,7 +72,7 @@
 						type: 'text',
 						rect: ['653px', '281px','auto','auto','auto', 'auto'],
 						text: "235",
-						font: ['open-sans, sans-serif', 40, "rgba(255,255,255,1.00)", "100", "none", ""]
+						font: ['OpenSans-Light, sans-serif', 40, "rgba(255,255,255,1.00)", "100", "none", ""]
 					},
 					{
 						id: 'blue_hor',
@@ -108,7 +107,7 @@
 						type: 'text',
 						rect: ['744px', '192px','auto','auto','auto', 'auto'],
 						text: "344",
-						font: ['open-sans, sans-serif', 40, "rgba(255,255,255,1.00)", "100", "none", ""]
+						font: ['OpenSans-Light, sans-serif', 40, "rgba(255,255,255,1.00)", "100", "none", ""]
 					},
 					{
 						id: 'orange_hor',
@@ -143,7 +142,7 @@
 						type: 'text',
 						rect: ['834px', '90px','auto','auto','auto', 'auto'],
 						text: "440",
-						font: ['open-sans, sans-serif', 40, "rgba(255,255,255,1.00)", "100", "none", ""]
+						font: ['OpenSans-Light, sans-serif', 40, "rgba(255,255,255,1.00)", "100", "none", ""]
 					},
 					{
 						id: 'gray_head',
@@ -221,7 +220,7 @@
 						["style", "top", '281px'],
 						["style", "font-weight", '100'],
 						["color", "color", 'rgba(255,255,255,0.00)'],
-						["style", "font-family", 'open-sans, sans-serif'],
+						["style", "font-family", 'OpenSans-Light, sans-serif'],
 						["style", "left", '653px'],
 						["style", "font-size", '40px']
 					],
@@ -318,7 +317,7 @@
 						["style", "top", '519px'],
 						["style", "font-weight", '100'],
 						["color", "color", 'rgba(255,255,255,0.00)'],
-						["style", "font-family", 'open-sans, sans-serif'],
+						["style", "font-family", 'OpenSans-Light, sans-serif'],
 						["style", "left", '653px'],
 						["style", "font-size", '40px']
 					],
@@ -361,7 +360,7 @@
 						["style", "top", '90px'],
 						["style", "font-weight", '100'],
 						["color", "color", 'rgba(255,255,255,0.00)'],
-						["style", "font-family", 'open-sans, sans-serif'],
+						["style", "font-family", 'OpenSans-Light, sans-serif'],
 						["style", "left", '834px'],
 						["style", "font-size", '40px']
 					],
@@ -404,7 +403,7 @@
 						["style", "top", '192px'],
 						["style", "font-weight", '100'],
 						["color", "color", 'rgba(255,255,255,0.00)'],
-						["style", "font-family", 'open-sans, sans-serif'],
+						["style", "font-family", 'OpenSans-Light, sans-serif'],
 						["style", "left", '744px'],
 						["style", "font-size", '40px']
 					],

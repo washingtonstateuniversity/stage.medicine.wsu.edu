@@ -5,8 +5,7 @@
 //images folder
 var im='http://wp.wsu.dev/wp-content/themes/medicine-dev/images/';
 
-var fonts = {};    fonts['open-sans, sans-serif']='<script src=\"http://use.edgefonts.net/open-sans:n7,i7,n8,i8,i4,n3,i3,n4,n6,i6:all.js\"></script>';
-    fonts['open-sans-condensed, sans-serif']='<script src=\"http://use.edgefonts.net/open-sans-condensed:n7,n3,i3:all.js\"></script>';
+var fonts = {};
 
 var opts = {
     'gAudioPreloadPreference': 'auto',
@@ -93,7 +92,7 @@ var symbols = {
                 type: 'text',
                 rect: ['477px', '495px','auto','auto','auto', 'auto'],
                 text: "9,895,622",
-                font: ['open-sans-condensed, sans-serif', 17, "rgba(128,128,128,1.00)", "normal", "none", ""]
+                font: ['OpenSans-CondLight, sans-serif', 17, "rgba(128,128,128,1.00)", "normal", "none", ""]
             },
             {
                 id: 'mi_sq_text',
@@ -101,7 +100,7 @@ var symbols = {
                 rect: ['437px', '574px','auto','auto','auto', 'auto'],
                 text: "96,713.51",
                 align: "left",
-                font: ['open-sans-condensed, sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
+                font: ['OpenSans-CondLight, sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
             },
             {
                 id: 'mi_gsp_text',
@@ -109,7 +108,7 @@ var symbols = {
                 rect: ['503px', '654px','auto','auto','auto', 'auto'],
                 text: "368,401",
                 align: "left",
-                font: ['open-sans-condensed, sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
+                font: ['OpenSans-CondLight, sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
             },
             {
                 id: 'wa_pop_text',
@@ -117,7 +116,7 @@ var symbols = {
                 rect: ['727px', '494px','auto','auto','auto', 'auto'],
                 text: "6,971,406",
                 align: "left",
-                font: ['open-sans-condensed, sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
+                font: ['OpenSans-CondLight, sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
             },
             {
                 id: 'wa_sq_text',
@@ -125,7 +124,7 @@ var symbols = {
                 rect: ['767px', '574px','auto','auto','auto', 'auto'],
                 text: "71,297.95",
                 align: "left",
-                font: ['open-sans-condensed, sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
+                font: ['OpenSans-CondLight, sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
             },
             {
                 id: 'wa_gsp_text',
@@ -133,7 +132,7 @@ var symbols = {
                 rect: ['713px', '654px','auto','auto','auto', 'auto'],
                 text: "338,334",
                 align: "left",
-                font: ['open-sans-condensed, sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
+                font: ['OpenSans-CondLight, sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
             },
             {
                 id: 'pop_line',
@@ -162,7 +161,7 @@ var symbols = {
                 rect: ['597px', '470px','auto','auto','auto', 'auto'],
                 text: "Population",
                 align: "left",
-                font: ['open-sans-condensed, sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
+                font: ['OpenSans-CondLight, sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
             },
             {
                 id: 'sq_miles_text',
@@ -170,7 +169,7 @@ var symbols = {
                 rect: ['601px', '550px','auto','auto','auto', 'auto'],
                 text: "Sq. Miles",
                 align: "left",
-                font: ['open-sans-condensed, sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
+                font: ['OpenSans-CondLight, sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
             },
             {
                 id: 'gsp_text',
@@ -178,7 +177,7 @@ var symbols = {
                 rect: ['619px', '630px','auto','auto','auto', 'auto'],
                 text: "GSP",
                 align: "left",
-                font: ['open-sans-condensed, sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
+                font: ['OpenSans-CondLight, sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
             },
             {
                 id: 'total_seats_text',
@@ -186,7 +185,7 @@ var symbols = {
                 rect: ['559px', '758px','auto','auto','auto', 'auto'],
                 text: "Total seats",
                 align: "left",
-                font: ['open-sans, sans-serif', 30, "rgba(252,176,60,1.00)", "100", "none", "normal"]
+                font: ['OpenSans-Light, sans-serif', 30, "rgba(252,176,60,1.00)", "100", "none", "normal"]
             },
             {
                 id: 'in_state_enrollment_text',
@@ -194,7 +193,7 @@ var symbols = {
                 rect: ['503px', '816px','auto','auto','auto', 'auto'],
                 text: "In-state enrollment",
                 align: "left",
-                font: ['open-sans, sans-serif', 30, "rgba(111,176,127,1.00)", "100", "none", "normal"]
+                font: ['OpenSans-Light, sans-serif', 30, "rgba(111,176,127,1.00)", "100", "none", "normal"]
             },
             {
                 id: 'wa_total_enrollment_container',
@@ -251,7 +250,7 @@ var symbols = {
                 rect: ['978px', '675px','auto','auto','auto', 'auto'],
                 text: "120",
                 align: "left",
-                font: ['open-sans, sans-serif', 40, "rgba(255,255,255,1)", "100", "none", "normal"]
+                font: ['OpenSans-Light, sans-serif', 40, "rgba(255,255,255,1)", "100", "none", "normal"]
             },
             {
                 id: 'total_seats_wa_vert',
@@ -266,7 +265,7 @@ var symbols = {
                 rect: ['885px', '569px','auto','auto','auto', 'auto'],
                 text: "235",
                 align: "left",
-                font: ['open-sans, sans-serif', 40, "rgba(255,255,255,1)", "100", "none", "normal"]
+                font: ['OpenSans-Light, sans-serif', 40, "rgba(255,255,255,1)", "100", "none", "normal"]
             },
             {
                 id: 'mi_total_seats_container',
@@ -330,7 +329,7 @@ var symbols = {
                 rect: ['307px', '195px','auto','auto','auto', 'auto'],
                 text: "826",
                 align: "left",
-                font: ['open-sans, sans-serif', 40, "rgba(255,255,255,1.00)", "100", "none", "normal"]
+                font: ['OpenSans-Light, sans-serif', 40, "rgba(255,255,255,1.00)", "100", "none", "normal"]
             },
             {
                 id: 'mi_total_enrollment_text',
@@ -338,7 +337,7 @@ var symbols = {
                 rect: ['215px', '391px','auto','auto','auto', 'auto'],
                 text: "595",
                 align: "left",
-                font: ['open-sans, sans-serif', 40, "rgba(255,255,255,1)", "100", "none", "normal"]
+                font: ['OpenSans-Light, sans-serif', 40, "rgba(255,255,255,1)", "100", "none", "normal"]
             },
             {
                 id: 'Text',
@@ -346,7 +345,7 @@ var symbols = {
                 rect: ['668px', '232px','auto','auto','auto', 'auto'],
                 text: "WASHINGTON",
                 align: "left",
-                font: ['open-sans, sans-serif', 30, "rgba(42,48,51,1.00)", "100", "none", "normal"]
+                font: ['OpenSans-Light, sans-serif', 30, "rgba(42,48,51,1.00)", "100", "none", "normal"]
             },
             {
                 id: 'Text2',
@@ -354,7 +353,7 @@ var symbols = {
                 rect: ['445px', '232px','auto','auto','auto', 'auto'],
                 text: "MICHIGAN",
                 align: "left",
-                font: ['open-sans, sans-serif', 30, "rgba(42,48,51,1)", "100", "none", "normal"]
+                font: ['OpenSans-Light, sans-serif', 30, "rgba(42,48,51,1)", "100", "none", "normal"]
             },
             {
                 id: 'Text3',
@@ -362,7 +361,7 @@ var symbols = {
                 rect: ['622px', '228px','auto','auto','auto', 'auto'],
                 text: "|",
                 align: "left",
-                font: ['open-sans, sans-serif', 30, "rgba(42,48,51,1)", "100", "none", "normal"]
+                font: ['OpenSans-Light, sans-serif', 30, "rgba(42,48,51,1)", "100", "none", "normal"]
             }],
             symbolInstances: [
 
@@ -552,7 +551,7 @@ var symbols = {
                 ["style", "top", '128px'],
                 ["style", "font-weight", '100'],
                 ["color", "color", 'rgba(255,255,255,0.00)'],
-                ["style", "font-family", 'open-sans, sans-serif'],
+                ["style", "font-family", 'OpenSans-Light, sans-serif'],
                 ["style", "left", '307px'],
                 ["style", "font-size", '40px']
             ],
@@ -626,7 +625,7 @@ var symbols = {
             "${_mi_pop_text}": [
                 ["style", "top", '495px'],
                 ["color", "color", 'rgba(128,128,128,1.00)'],
-                ["style", "font-family", 'open-sans-condensed, sans-serif'],
+                ["style", "font-family", 'OpenSans-CondLight, sans-serif'],
                 ["style", "left", '477px'],
                 ["style", "font-size", '17px']
             ],

@@ -29,6 +29,7 @@ class WSU_Medicine_Shortcodes {
 		$mi_wa_graph = has_shortcode( $post->post_content, 'wsu_medicine_mi_wa_graph' );
 
 		if ( $medicine_seats || $mi_wa_graph ) {
+			wp_enqueue_style( 'wsu-spine-opensans', 'https://repo.wsu.edu/spine/1/styles/opensans.css', array(), spine_get_script_version() );
 			wp_enqueue_script( 'adobe-edge', 'https://animate.adobe.com/runtime/4.0.1/edge.4.0.1.min.js', array( 'jquery' ), false, true );
 		}
 
