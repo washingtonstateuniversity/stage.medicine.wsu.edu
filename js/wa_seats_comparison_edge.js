@@ -389,7 +389,7 @@
 						["style", "left", '776px'],
 						["style", "width", '3px']
 					],
-					"${_Stage}": [
+					"${_Stage_comparison}": [
 						["color", "background-color", 'rgba(255,255,255,1)'],
 						["style", "overflow", 'hidden'],
 						["style", "height", '400px'],
