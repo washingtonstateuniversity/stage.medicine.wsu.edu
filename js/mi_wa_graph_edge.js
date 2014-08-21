@@ -22,7 +22,7 @@ var symbols = {
     build: "4.0.1.365",
     baseState: "Base State",
     scaleToFit: "width",
-    centerStage: "both",
+    centerStage: false,
     initialState: "Base State",
     gpuAccelerate: false,
     resizeInstances: false,
