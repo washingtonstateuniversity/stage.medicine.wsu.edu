@@ -435,7 +435,7 @@ var symbols = {
                 ["style", "top", '574px']
             ],
             "${_mi_total_enrollment_text}": [
-                ["style", "top", '391px'],
+                ["style", "top", '406px'],
                 ["color", "color", 'rgba(255,255,255,0.00)'],
                 ["style", "left", '216px'],
                 ["transform", "rotateZ", '0deg']
@@ -506,7 +506,7 @@ var symbols = {
                 ["style", "top", '228px']
             ],
             "${_wa_total_enrollment_text}": [
-                ["style", "top", '675px'],
+                ["style", "top", '690px'],
                 ["style", "left", '978px'],
                 ["color", "color", 'rgba(255,255,255,0.00)']
             ],
@@ -548,7 +548,7 @@ var symbols = {
                 ["style", "right", '0px']
             ],
             "${_mi_total_seats_text}": [
-                ["style", "top", '128px'],
+                ["style", "top", '143px'],
                 ["style", "font-weight", '100'],
                 ["color", "color", 'rgba(255,255,255,0.00)'],
                 ["style", "font-family", 'OpenSans-Light, sans-serif'],
@@ -579,7 +579,7 @@ var symbols = {
                 ["style", "width", '136px']
             ],
             "${_wa_total_seats_text}": [
-                ["style", "top", '569px'],
+                ["style", "top", '584px'],
                 ["style", "left", '885px'],
                 ["color", "color", 'rgba(255,255,255,0.00)']
             ],
@@ -687,7 +687,7 @@ var symbols = {
                 { id: "eid171", tween: [ "style", "${_wa_total_enrollment_container}", "clip", [0,90,90,0], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,40,90,0]}], position: 1000, duration: 250, easing: "easeInQuint" },
                 { id: "eid170", tween: [ "color", "${_wa_total_seats_text}", "color", 'rgba(255,255,255,1)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(255,255,255,0.00)'}], position: 0, duration: 1250 },
                 { id: "eid140", tween: [ "style", "${_mi_total_enrollment_container}", "clip", [0,90,90,0], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,40,90,0]}], position: 1698, duration: 250, easing: "easeInQuint" },
-                { id: "eid249", tween: [ "style", "${_mi_total_seats_text}", "top", '128px', { fromValue: '128px'}], position: 1948, duration: 0, easing: "easeInQuint" },
+                { id: "eid249", tween: [ "style", "${_mi_total_seats_text}", "top", '143px', { fromValue: '143px'}], position: 1948, duration: 0, easing: "easeInQuint" },
                 { id: "eid80", tween: [ "style", "${_in_state_enrollment_mi_vert}", "height", '378px', { fromValue: '0px'}], position: 500, duration: 1198 },
                 { id: "eid176", tween: [ "style", "${_wa_total_enrollment_container}", "top", '657px', { fromValue: '657px'}], position: 1250, duration: 0 },
                 { id: "eid31", tween: [ "style", "${_total_seats_mi_vert}", "top", '201px', { fromValue: '779px'}], position: 500, duration: 1198 },
