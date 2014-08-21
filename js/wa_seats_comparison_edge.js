@@ -3,7 +3,7 @@
  */
 (function($, Edge, compId){
 //images folder
-	var im= window.wsu_theme_dir;
+	var im= window.wsu_theme_dir + 'images/';
 
 	var fonts = {};
 

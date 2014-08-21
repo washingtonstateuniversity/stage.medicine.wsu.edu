@@ -50,7 +50,7 @@ if(!AdobeEdge.yepnope) {
 	};
 
 	aLoader = [
-		{ load: "http://wp.wsu.dev/wp-content/themes/medicine-dev/js/wa_seats_comparison_edgeActions.js"}];
+		{ load: window.wsu_theme_dir + "js/wa_seats_comparison_edgeActions.js"}];
 
 	if (AdobeEdge.bootstrapLoading) { signaledLoading = true; AdobeEdge.loadResources=doLoadResources; AdobeEdge.playWhenReady=playWhenReady; }
 

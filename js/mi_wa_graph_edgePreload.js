@@ -50,7 +50,7 @@ if(document.addEventListener ){
    };
 
    aLoader = [
-      { load: "http://wp.wsu.dev/wp-content/themes/medicine-dev/js/mi_wa_graph_edgeActions.js"}];
+      { load: window.wsu_theme_dir + "js/mi_wa_graph_edgeActions.js"}];
 
 if (AdobeEdge.bootstrapLoading) { signaledLoading = true; AdobeEdge.loadResources=doLoadResources; AdobeEdge.playWhenReady=playWhenReady; }
 
