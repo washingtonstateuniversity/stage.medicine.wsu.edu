@@ -12,7 +12,10 @@ class WSU_Medicine_Shortcodes {
 	}
 
 	public function head_style() {
-		?><style> .edgeLoad-EDGE-21518124 { visibility:hidden; } .edgeLoad-wa_mi_comparison { visibility:hidden; } </style><?php
+		?>
+		<style> .edgeLoad-EDGE-21518124 { visibility:hidden; } .edgeLoad-wa_mi_comparison { visibility:hidden; } </style>
+		<script> var wsu_theme_dir = '<?php echo esc_url( get_stylesheet_directory_uri() . '/images/' ); ?>';</script>
+		<?php
 	}
 
 	/**

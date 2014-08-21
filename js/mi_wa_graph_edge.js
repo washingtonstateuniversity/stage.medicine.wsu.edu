@@ -3,7 +3,7 @@
  */
 (function($, Edge, compId){
 //images folder
-var im='http://wp.wsu.dev/wp-content/themes/medicine-dev/images/';
+var im= window.wsu_theme_dir;
 
 var fonts = {};
 
