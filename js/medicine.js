@@ -1,4 +1,4 @@
-(function ($, window) {
+(function ($, Edge, window) {
 
 	var medicine_skrollr;
 
@@ -30,6 +30,8 @@
 		// Fire skrollr
 		medicine_skrollr = skrollr.init({forceHeight: true, smoothScrolling: true});
 
+		Edge.launchComposition("EDGE-21518124");
+		Edge.launchComposition("wa_mi_comparison");
 	});
 
-}(jQuery, window));
+}(jQuery, AdobeEdge, window));
