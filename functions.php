@@ -24,5 +24,11 @@ add_action( 'after_setup_theme', 'wsu_medicine_setup_image_sizes', 10 );
  * Add an image size for a width of 1600 for larger featured images.
  */
 function wsu_medicine_setup_image_sizes() {
-	$test = add_image_size( 'medicine-featured-image', 1600, 99164 );
+	add_image_size( 'medicine-featured-image', 1600, 99164 );
+}
+
+add_action( 'wp_enqueue_scripts', 'wsu_medicine_enqueue_scripts', 11 );
+function wsu_medicine_enqueue_scripts() {
+	wp_enqueue_script( 'skrollr', get_stylesheet_directory_uri() . '/js/skrollr.min.js', array( 'jquery' ), false, false );
+	wp_enqueue_script( 'wsu-medicine', get_stylesheet_directory_uri() . '/js/medicine.js', array( 'skrollr' ), false, true );
 }
