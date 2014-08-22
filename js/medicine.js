@@ -1,4 +1,4 @@
-(function ($, Edge, window) {
+(function ($, window) {
 
 	var medicine_skrollr;
 	var seats_scroll_point;
