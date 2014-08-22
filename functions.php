@@ -3,6 +3,15 @@
 include_once( __DIR__ . '/includes/medicine-county-data.php' );
 include_once( __DIR__ . '/includes/shortcodes.php' );
 
+/**
+ * Provide a cache breaking script version for the theme.
+ *
+ * @return string Current script version
+ */
+function wsu_medicine_script_version() {
+	return spine_get_script_version() . '0.7.0';
+}
+
 add_action( 'wp_footer', 'wsu_medicine_sharing_footer' );
 /**
  * Output a short script to adjust the sharing text on the tweet icon.
@@ -29,6 +38,6 @@ function wsu_medicine_setup_image_sizes() {
 
 add_action( 'wp_enqueue_scripts', 'wsu_medicine_enqueue_scripts', 11 );
 function wsu_medicine_enqueue_scripts() {
-	wp_enqueue_script( 'skrollr', get_stylesheet_directory_uri() . '/js/skrollr.min.js', array( 'jquery' ), false, false );
-	wp_enqueue_script( 'wsu-medicine', get_stylesheet_directory_uri() . '/js/medicine.js', array( 'skrollr' ), false, true );
+	wp_enqueue_script( 'skrollr', get_stylesheet_directory_uri() . '/js/skrollr.min.js', array( 'jquery' ), wsu_medicine_script_version(), false );
+	wp_enqueue_script( 'wsu-medicine', get_stylesheet_directory_uri() . '/js/medicine.min.js', array( 'skrollr' ), wsu_medicine_script_version(), true );
 }

@@ -730,13 +730,6 @@ var symbols = {
 }
 };
 
-
 Edge.registerCompositionDefn(compId, symbols, fonts, resources, opts);
 
-/**
- * Adobe Edge DOM Ready Event Handler
- */
-$(window).ready(function() {
-     Edge.launchComposition(compId);
-});
 })(jQuery, AdobeEdge, "wa_mi_comparison");
