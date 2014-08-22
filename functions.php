@@ -18,3 +18,11 @@ function wsu_medicine_sharing_footer() {
 		});
 	</script><?php
 }
+
+add_action( 'after_setup_theme', 'wsu_medicine_setup_image_sizes', 10 );
+/**
+ * Add an image size for a width of 1600 for larger featured images.
+ */
+function wsu_medicine_setup_image_sizes() {
+	$test = add_image_size( 'medicine-featured-image', 1600, 99164 );
+}
