@@ -1,4 +1,4 @@
-(function ($, Edge, window) {
+(function ($, window) {
 
 	var medicine_skrollr;
 	var seats_scroll_point;
@@ -30,7 +30,7 @@
 	function medicine_seats_scroll_handler() {
 		var current_position = jQuery(window ).scrollTop();
 		if ( seats_scroll_point < current_position ) {
-			Edge.launchComposition('EDGE-21518124');
+			window.AdobeEdge.launchComposition('EDGE-21518124');
 			$(window).off('scroll', medicine_seats_scroll_handler);
 		}
 	}
@@ -42,7 +42,7 @@
 	function medicine_states_scroll_handler() {
 		var current_position = jQuery(window).scrollTop();
 		if ( states_scroll_point < current_position ) {
-			Edge.launchComposition('wa_mi_comparison');
+			window.AdobeEdge.launchComposition('wa_mi_comparison');
 			$(window).off('scroll', medicine_states_scroll_handler);
 		}
 
@@ -80,4 +80,4 @@
 
 	});
 
-}(jQuery, AdobeEdge, window));
+}(jQuery, window));
