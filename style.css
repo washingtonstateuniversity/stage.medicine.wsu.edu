@@ -8,13 +8,9 @@
  Version:        0.2.0
 */
 
-/*
-Title: Graphs and Maps
-Description: Graph elements to control the colors, lines, and functions
-*/
-/********************
-  Map
-*/
+/***************************
+  Styles for SVG County Map
+****************************/
 #svg-wa-map {
 	position:relative;
 	width:100%;
