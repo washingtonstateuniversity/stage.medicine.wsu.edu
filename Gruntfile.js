@@ -31,7 +31,8 @@ module.exports = function(grunt) {
 				ext: '.min.js',
 				src: [
 					'medicine-states-comparison.js',
-					'medicine-seats-comparison.js'
+					'medicine-seats-comparison.js',
+					'medicine.js'
 				]
 			}
 		},

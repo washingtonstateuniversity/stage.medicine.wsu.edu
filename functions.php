@@ -30,5 +30,5 @@ function wsu_medicine_setup_image_sizes() {
 add_action( 'wp_enqueue_scripts', 'wsu_medicine_enqueue_scripts', 11 );
 function wsu_medicine_enqueue_scripts() {
 	wp_enqueue_script( 'skrollr', get_stylesheet_directory_uri() . '/js/skrollr.min.js', array( 'jquery' ), false, false );
-	wp_enqueue_script( 'wsu-medicine', get_stylesheet_directory_uri() . '/js/medicine.js', array( 'skrollr' ), false, true );
+	wp_enqueue_script( 'wsu-medicine', get_stylesheet_directory_uri() . '/js/medicine.min.js', array( 'skrollr' ), false, true );
 }
