@@ -2,6 +2,23 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
+		concat: {
+			states: {
+				src: [
+					'js/medicine-states-edge.js',
+					'js/medicine-states-edge-preload.js'
+				],
+				dest: 'js/medicine-states-comparison.js'
+			},
+			seats: {
+				src: [
+					'js/medicine-seats-edge.js',
+					'js/medicine-seats-edge-preload.js'
+				],
+				dest: 'js/medicine-seats-comparison.js'
+			}
+		},
+
 		uglify: {
 			options: {
 				banner: '/*! <%= pkg.name %> <%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n' +
@@ -13,18 +30,17 @@ module.exports = function(grunt) {
 				dest: 'js/',
 				ext: '.min.js',
 				src: [
-					'mi_wa_graph_edge.js',
-					'mi_wa_graph_edgePreload.js',
-					'wa_seats_comparison_edge.js',
-					'wa_seats_comparison_edge_preload.js'
+					'medicine-states-comparison.js',
+					'medicine-seats-comparison.js'
 				]
 			}
 		}
 	});
 
+	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	// Default task(s).
-	grunt.registerTask('default', ['uglify']);
+	grunt.registerTask('default', ['concat', 'uglify']);
 
 };
