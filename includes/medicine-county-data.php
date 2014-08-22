@@ -22,7 +22,11 @@ class WSU_Medicine_County_Data {
 	 * @param string $post_type Current post type being edited.
 	 */
 	public function add_meta_boxes( $post_type ) {
-		add_meta_box( 'wsu_svg_county_data', 'County Data JSON', array( $this, 'county_data_json' ), $post_type );
+		global $post;
+
+		if ( $post->post_content && has_shortcode( $post->post_content, 'wsu_medicine_county_map' ) ) {
+			add_meta_box( 'wsu_svg_county_data', 'County Data JSON', array( $this, 'county_data_json' ), $post_type );
+		}
 	}
 
 	/**
@@ -53,7 +57,7 @@ class WSU_Medicine_County_Data {
 	 * @param WP_Post $post    Current post object.
 	 */
 	public function save_post( $post_id, $post ) {
-		if ( 'page' === $post->post_type && isset( $_POST['county_json'] ) ) {
+		if ( 'page' === $post->post_type && isset( $_POST['county_json'] ) && has_shortcode( $post->post_content, 'wsu_medicine_county_map' ) ) {
 			// Reform the JSON object that is expected.
 			$json_object = '{ "counties": { ' . wp_unslash( $_POST['county_json'] ) . '} }';
 
