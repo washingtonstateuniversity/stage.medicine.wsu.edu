@@ -4,7 +4,6 @@
 
 	$(document).ready(function(){
 		var featured_image = $('.featured-image');
-		var margin_section = $('.skrollr-margin-section');
 		var h1_header = $('.h1-header');
 
 		// The featured image area should start at 350px and shrink in height to 0 while the
