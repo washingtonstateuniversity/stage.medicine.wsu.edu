@@ -1,19 +1,33 @@
 <?php
 
 class WSU_Medicine_County_Data {
+	/**
+	 * Setup hooks.
+	 */
 	public function __construct() {
 		add_action( 'init', array( $this, 'setup' ) );
 		add_action( 'save_post', array( $this, 'save_post' ), 10, 2 );
 	}
 
+	/**
+	 * Begin the meta box adding process.
+	 */
 	public function setup() {
 		add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ), 10, 2 );
 	}
 
+	/**
+	 * Add the meta box used to capture county data for the SVG map.
+	 *
+	 * @param string $post_type Current post type being edited.
+	 */
 	public function add_meta_boxes( $post_type ) {
 		add_meta_box( 'wsu_svg_county_data', 'County Data JSON', array( $this, 'county_data_json' ), $post_type );
 	}
 
+	/**
+	 * Display a meta box to capture county data in JSON format.
+	 */
 	public function county_data_json() {
 		$current_json = get_post_meta( get_the_ID(), '_county_json_data', true );
 
@@ -32,6 +46,12 @@ class WSU_Medicine_County_Data {
 		?><textarea name="county_json" style="width:100%; height:100%;min-height: 300px;"><?php echo $current_json; ?></textarea><?php
 	}
 
+	/**
+	 * Save county data from the meta box into a JSON object for use with the SVG map.
+	 *
+	 * @param int     $post_id Current post ID.
+	 * @param WP_Post $post    Current post object.
+	 */
 	public function save_post( $post_id, $post ) {
 		if ( 'page' === $post->post_type && isset( $_POST['county_json'] ) ) {
 			// Reform the JSON object that is expected.
