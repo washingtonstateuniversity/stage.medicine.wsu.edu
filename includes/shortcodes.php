@@ -43,13 +43,11 @@ class WSU_Medicine_Shortcodes {
 		}
 
 		if ( $medicine_seats ) {
-			wp_enqueue_script( 'wsu-medicine-seat-js', get_stylesheet_directory_uri() . '/js/wa_seats_comparison_edge.js', array( 'adobe-edge' ), spine_get_script_version() . $this->theme_version, true );
-			wp_enqueue_script( 'wsu-medicine-seats', get_stylesheet_directory_uri() . '/js/wa_seats_comparison_edge_preload.js', array( 'adobe-edge' ), spine_get_script_version() . $this->theme_version, true );
+			wp_enqueue_script( 'wsu-medicine-seats', get_stylesheet_directory_uri() . '/js/medicine-seats-comparison.min.js', array( 'adobe-edge' ), spine_get_script_version() . $this->theme_version, true );
 		}
 
 		if ( $mi_wa_graph ) {
-			wp_enqueue_script( 'wsu-medicine-graph-js', get_stylesheet_directory_uri() . '/js/mi_wa_graph_edge.js', array( 'adobe-edge' ), spine_get_script_version() . $this->theme_version, true );
-			wp_enqueue_script( 'wsu-medicine-graph', get_stylesheet_directory_uri() . '/js/mi_wa_graph_edgePreload.js', array( 'adobe-edge' ), spine_get_script_version() . $this->theme_version, true );
+			wp_enqueue_script( 'wsu-medicine-states', get_stylesheet_directory_uri() . '/js/medicine-states-comparison.min.js', array( 'adobe-edge' ), spine_get_script_version() . $this->theme_version, true );
 		}
 	}
 
