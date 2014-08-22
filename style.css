@@ -7,3 +7,181 @@
  Template:       spine
  Version:        0.2.0
 */
+
+/***************************
+  Styles for SVG County Map
+****************************/
+#svg-wa-map {
+	position:relative;
+	width:100%;
+	margin-top:1em;
+	margin-bottom:6em;
+	text-align: center;
+}
+#svg-wa-map svg {
+	overflow: hidden;
+	display:block;
+	width:100%;
+}
+.size-lt-large #svg-wa-map svg {
+	height:400px;
+}
+.size-lt-medium #svg-wa-map svg {
+	height:350px;
+}
+@media all and (max-width : 500px) {
+	.size-lt-medium #svg-wa-map svg {
+		height:250px;
+	}
+}
+@media all and (max-width : 400px) {
+	.size-lt-medium #svg-wa-map svg {
+		height:180px;
+	}
+}
+.counties {
+	stroke:#5E6A71;
+	width:100%;
+	height:100%;
+	-webkit-transform: translate(0%,0%);
+	-ms-transform: translate(0%,0%);
+	-moz-transform: translate(0%,0%);
+	transform: translate(0%,0%);
+	-webkit-transform-origin: center;
+	-ms-transform-origin: center;
+	-moz-transform-origin:center;
+	transform-origin: center;
+	stroke-miterlimit:10;
+
+}
+.counties:hover {
+	-webkit-transform: translate(0%,-5%);
+	-ms-transform: translate(0%,-5%);
+	-moz-transform: translate(0%,-5%);
+	transform: translate(0%,-5%);
+	-webkit-transform-origin: center;
+	-ms-transform-origin: center;
+	-moz-transform-origin:center;
+	transform-origin: center;
+	-webkit-transition-property: transform;
+	-ms-transition-property: transform;
+	-moz-transition-property: transform;
+	transition-property: transform;
+	transition-duration: 3s;
+	cursor: pointer;
+}
+/* Blue */
+#king, #chelan {
+	fill:#00a651;
+}
+/* Light Blue */
+#wallaWalla  {
+	fill:#47b748;
+}
+/* Green */
+#thurston, #skagit, #spokane, #whatcom, #asotin  {
+	fill:#8dc73f;
+}
+/* Yellow */
+#clallam, #clark, #benton, #jefferson, #pierce, #cowlitz, #kitsap, #sanJuan, #yakima  {
+	fill:#f8941d;
+}
+/* Orange */
+#graysHarbor, #okanogan, #whitman, #snohomish, #lewis, #island, #stevens, #klickitat  {
+	fill:#f6811f;
+}
+/* Red */
+#franklin, #ferry, #pacific, #garfield, #adams, #mason, #pendOreille, #lincoln, #kittitas, #grant, #douglas, #columbia, #skamania, #wahkiakum {
+	fill:#f36c21;
+}
+/* */
+#mapKey {
+	height:12px;
+	width:100%;
+	margin-top:30px;
+}
+.mapLabel {
+	display:inline-block;
+	width: 16%;
+	height: 12px;
+	float:left;
+}
+.labelLow, .labelMidLowest, .labelMidLow, .labelMidHigh, .labelMidHigher, .labelHighest {
+	padding-top:1em;
+	text-align: center;
+	font-size: 90%;
+	line-height: 1.4em;
+}
+.labelLow {
+	border-top:solid 8px #00a651;
+}
+.labelMidLowest {
+	border-top:solid 8px #47b748;
+}
+.labelMidLow {
+	border-top:solid 8px #8dc73f;
+}
+.labelMidHigh {
+	border-top:solid 8px #f8941d;
+}
+.labelMidHigher {
+	border-top:solid 8px #f6811f;
+}
+.labelHighest {
+	border-top:solid 8px #f36c21;
+}
+.tooltip {
+	display:none;
+	text-align: center;
+	color: #5e6a71;
+	max-width: 300px;
+	min-height: 30px;
+	position: absolute;
+	top:-999em;
+	left:-99em;
+	background: #fff;
+	border: 1px solid #5e6a71;
+	margin: 4px 4px 12px 4px;
+	padding: 8px;
+	border-radius: 5px;
+	z-index:99199;
+}
+.tooltip:after, .tooltip:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.tooltip:after {
+	border-top-color: #ffffff;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.tooltip:before {
+	border-top-color: #6d6d6d;
+	border-width: 9px;
+	margin-left: -9px;
+}
+.tooltip h3, .tooltip h4 {
+	color:#5e6a71;
+}
+.tooltip h3 {
+	background-color: rgba(247,247,247,0.75);
+	font-size:1.2em;
+	padding-top:0;
+	padding-left:0;
+	padding-right:0;
+	padding-bottom:4px;
+	margin-bottom:8px;
+}
+.tooltip h4 {
+	font-size:1.1em;
+	text-transform: capitalize;
+	font-weight: normal;
+	display:block;
+	padding:2px;
+}
