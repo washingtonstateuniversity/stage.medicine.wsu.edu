@@ -5,7 +5,7 @@ class WSU_Medicine_Shortcodes {
 	/**
 	 * @var string Script version of the theme.
 	 */
-	var $theme_version = '0.3.0';
+	var $theme_version = '0.4.0';
 
 	/**
 	 * Setup hooks and shortcodes.
