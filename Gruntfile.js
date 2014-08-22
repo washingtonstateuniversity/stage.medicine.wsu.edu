@@ -34,13 +34,23 @@ module.exports = function(grunt) {
 					'medicine-seats-comparison.js'
 				]
 			}
+		},
+
+		clean: {
+			temporary: {
+				src: [
+					'js/medicine-seats-comparison.js',
+					'js/medicine-states-comparison.js'
+				]
+			}
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 
 	// Default task(s).
-	grunt.registerTask('default', ['concat', 'uglify']);
+	grunt.registerTask('default', ['concat', 'uglify', 'clean']);
 
 };
