@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 
 		uglify: {
 			options: {
-				banner: '/*! <%= pkg.name %> <%= pkg.version %> */\n' +
+				banner: '/*! <%= pkg.name %> */\n' +
 					'/*  See https://github.com/washingtonstateuniversity/stage.medicine.wsu.edu/ for full source.*/\n'
 			},
 			theme: {
