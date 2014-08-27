@@ -86,6 +86,10 @@
 
 			// Fire skrollr
 			medicine_skrollr = skrollr.init({forceHeight: true, smoothScrolling: true});
+		} else {
+			// Remove classes used to set margins when Skrollr is active.
+			$('.skrollr-margin-section' ).removeClass('skrollr-margin-section');
+			$('.home-next-section' ).removeClass('home-next-section');
 		}
 
 		setup_graph_on_scroll();
