@@ -67,13 +67,13 @@
 		if ( false === is_mobile() ) {
 			// The featured image area should start at 350px and shrink in height to 0 while the
 			// background image appears that it remains in the same place.
-			featured_image.attr( 'data-0', 'height: 350px; background-position-y:0;position: fixed; top:0;' );
-			featured_image.attr( 'data-' + 350, 'height: 0; background-position-y:0;position: fixed; top: 0;');
+			//featured_image.attr( 'data-0', 'background-position: 50% 0;' );
+			//featured_image.attr( 'data-' + 50, 'background-position: 50% -100px;');
 
 			// The header for the page should track the moving section as it goes up the page
 			// and over the featured image.
-			h1_header.attr( 'data-' + 0, 'position: fixed; top: 349px;' );
-			h1_header.attr( 'data-' + 350, 'position: fixed; top: 0px;' );
+			//h1_header.attr( 'data-' + 0, 'position: fixed; top: 349px;' );
+			//h1_header.attr( 'data-' + 350, 'position: fixed; top: 0px;' );
 
 			// The home page image should start at 700px high and shrink in height to 0 while the
 			// background image appears that it remains in the same place.
