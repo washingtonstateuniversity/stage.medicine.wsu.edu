@@ -240,12 +240,24 @@ sup {
 	h1 {
 		font-size: 1.5rem;
 	}
+
+	.h1-header {
+		margin-top: -72px;
+	}
+
+	.h1-header.single.gutter .column {
+		padding-left: 1rem;
+	}
 }
 
 @media screen and (max-width: 400px ) {
 	h1 {
 		font-size: 1.2rem;
-		margin-left: 0;
+		margin-left: -1rem;
+	}
+
+	.h1-header {
+		margin-top: -68px;
 	}
 }
 

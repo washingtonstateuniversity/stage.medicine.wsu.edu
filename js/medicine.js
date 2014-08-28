@@ -90,7 +90,7 @@
 		if ( is_home() ) {
 			featured_height = Math.round( window_right / 1.77 );
 		} else {
-			featured_height = Math.round( window_right / 3.15581854 ) + 30;
+			featured_height = Math.round( window_right / 3.15581854 );
 		}
 
 		var image = $('.featured-image');
