@@ -1,6 +1,5 @@
 (function ($, window) {
 
-	var medicine_skrollr;
 	var seats_scroll_point;
 	var states_scroll_point;
 	var current_window_width;
