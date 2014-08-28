@@ -21,9 +21,6 @@
 .home .pic1 {
 	position: absolute;
 	top: 260px;
-	/*transition-property: top;
-	transition-duration: 1s;
-	transition-delay: 0s;*/
 }
 
 .home .pic1 .column {
@@ -34,24 +31,19 @@
 
 /* The sizing of the featured image on individual posts works
    until a certain point, at which the H2 starts to distance
-   itself from the image. This will need to be targetted with
+   itself from the image. This will need to be targeted with
    mobile styles. */
 .featured-image {
-	background-position: 50% 0;
+	background-size: contain;
+	background-position: 99px 0;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: contain;
 	height: 350px;
 	width: 100%;
 }
 
 .home .featured-image {
-	background-size: contain;
-	background-position: 99px 0;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
 	height: 700px;
-	width: 100%;
 }
 
 @media screen and (max-width: 791px) {
