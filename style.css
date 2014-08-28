@@ -221,7 +221,7 @@ sup {
 }
 
 @media screen and (max-width: 791px) {
-	.home .featured-image {
+	.featured-image {
 		background-position: 50% 0;
 	}
 }
