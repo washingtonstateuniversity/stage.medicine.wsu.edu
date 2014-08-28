@@ -69,6 +69,7 @@
 	 */
 	function watch_background() {
 		var window_width = Math.round( $(window ).width() );
+		var window_left;
 
 		// If the width is not changing, we should stop.
 		if ( window_width === current_window_width ) {
@@ -77,7 +78,13 @@
 			current_window_width = window_width;
 		}
 
-		var window_left = jQuery('#spine').offset().left + 198;
+		if ( 791 < window_width ) {
+			window_left = jQuery('#spine').offset().left + 198;
+		} else {
+			window_left = 0;
+		}
+
+
 		var window_right = Math.round( window_width - window_left );
 
 		if ( is_home() ) {
