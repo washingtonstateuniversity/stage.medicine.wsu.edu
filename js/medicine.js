@@ -5,6 +5,7 @@
 	var current_scroll_position;
 	var featured_height;
 	var view_is_home = 0;
+	var window_width;
 
 	/**
 	 * Determine if this page view has the `home` class assigned to body.
@@ -68,7 +69,7 @@
 	 * is always centered in the container at the top of the page.
 	 */
 	function watch_background() {
-		var window_width = Math.round( $(window ).width() );
+		window_width = Math.round( $(window ).width() );
 		var window_left;
 
 		// If the width is not changing, we should stop.
@@ -112,7 +113,7 @@
 		if ( pos < 700 ) {
 			var headline = $('.pic1');
 			var headline_height = headline.height();
-			var current_height = featured_height - pos;
+			var current_height = featured_height - pos - 35;
 			var new_top = ( ( current_height / 2 ) - ( headline_height / 2 ) ) + pos;
 
 			if ( 20 > ( current_height - headline_height ) ) {
