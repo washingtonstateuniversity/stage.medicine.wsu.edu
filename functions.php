@@ -9,7 +9,7 @@ include_once( __DIR__ . '/includes/shortcodes.php' );
  * @return string Current script version
  */
 function wsu_medicine_script_version() {
-	return spine_get_script_version() . '0.8.0';
+	return spine_get_script_version() . '0.9.0';
 }
 
 add_action( 'wp_footer', 'wsu_medicine_sharing_footer' );
