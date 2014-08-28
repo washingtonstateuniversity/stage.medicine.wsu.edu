@@ -59,18 +59,6 @@ body {
 	text-transform: uppercase;
 }
 
-/* Used to set the margin between image and content when the
-   featured image becomes fixed due to Skrollr. These classes
-   are removed from content if Javascript detects that this is
-   a mobile view. */
-.skrollr-margin-section {
-	margin-top: 0;
-}
-
-.home-next-section {
-	margin-top: 0;
-}
-
 /* ------------------------------------------------------*/
 .h1-header {
 	margin-top: -80px;
