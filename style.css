@@ -9,7 +9,7 @@
 */
 
 body {
-	font-family: 'open sans', lucida sans, sans serif;
+	font-family: 'Open Sans', "Lucida Sans", sans-serif;
 	font-weight: 300;
 	background-color: #fff;
 	color: #464e54;
@@ -128,8 +128,9 @@ p {
 }
 
 em {
-	font-family: 'open sans', Arial, serif;
-	font-weight: 300italic;
+	font-family: 'Open Sans', Arial, serif;
+	font-weight: 300;
+	font-style: italic;
 }
 
 .small {
