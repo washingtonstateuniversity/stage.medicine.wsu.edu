@@ -84,7 +84,6 @@
 			window_left = 0;
 		}
 
-
 		var window_right = Math.round( window_width - window_left );
 
 		if ( is_home() ) {
