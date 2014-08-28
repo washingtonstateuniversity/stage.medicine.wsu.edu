@@ -3,6 +3,10 @@
 	var medicine_skrollr;
 	var seats_scroll_point;
 	var states_scroll_point;
+	var current_window_width;
+	var current_scroll_position;
+	var headline_top;
+	var featured_height;
 
 	/**
 	 * Setup our page view to look for either of our animated graphs and
@@ -49,47 +53,64 @@
 	}
 
 	/**
-	 * Determine if the page view is occurring on a mobile device, as the skrollr functionality
-	 * cannot be relied on at that point.
-	 *
-	 * @returns {*|boolean}
+	 * Watch the size of the featured image's background area so that it
+	 * is always centered in the container at the top of the page.
 	 */
-	function is_mobile() {
-		return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+	function watch_background() {
+		var window_width = Math.round( $(window ).width() );
+
+		// If the width is not changing, we should stop.
+		if ( window_width === current_window_width ) {
+			return;
+		} else {
+			current_window_width = window_width;
+		}
+
+		var window_left = jQuery('#spine').offset().left + 198;
+		var window_right = Math.round( window_width - window_left );
+		featured_height = Math.round( window_right / 1.77 );
+
+		var image = $('.featured-image');
+		var headline = $('.pic1');
+
+		headline_top = Math.round( ( featured_height / 2 ) - ( headline.height() / 2 ) );
+
+		image.css('width', window_right + 'px' );
+		image.css('height', featured_height + 'px' );
+		headline.css('top', headline_top + 'px' );
+		watch_headline();
+	}
+
+	/**
+	 * Watch the headline area's position when scrolling so that it always moves
+	 * with the position of the viewport.
+	 */
+	function watch_headline() {
+		var pos = $(window ).scrollTop();
+
+		if ( pos < 700 ) {
+			var headline = $('.pic1');
+			var headline_height = headline.height();
+			var current_height = featured_height - pos;
+			var new_top = ( ( current_height / 2 ) - ( headline_height / 2 ) ) + pos;
+
+			if ( 20 > ( current_height - headline_height ) ) {
+				return;
+			}
+
+			headline.css('top', new_top + 'px' );
+		}
+
+		current_scroll_position = pos;
 	}
 
 	$(document).ready(function(){
-		var featured_image = $('.featured-image');
-		var h1_header = $('.h1-header');
-		var home_page_pic = $('.pic1');
-		var home_page_pic_title = $('.pic1 .center');
 
-		if ( false === is_mobile() ) {
-			// The featured image area should start at 350px and shrink in height to 0 while the
-			// background image appears that it remains in the same place.
-			//featured_image.attr( 'data-0', 'background-position: 50% 0;' );
-			//featured_image.attr( 'data-' + 50, 'background-position: 50% -100px;');
-
-			// The header for the page should track the moving section as it goes up the page
-			// and over the featured image.
-			//h1_header.attr( 'data-' + 0, 'position: fixed; top: 349px;' );
-			//h1_header.attr( 'data-' + 350, 'position: fixed; top: 0px;' );
-
-			// The home page image should start at 700px high and shrink in height to 0 while the
-			// background image appears that it remains in the same place.
-			home_page_pic.attr( 'data-0', 'height:700px; width: 1188px;background-position-y:0;position:fixed; top:0;');
-			home_page_pic.attr( 'data-700', 'height:0px; width:1188px;background-position-y:0;position:fixed; top:0;');
-
-			// The title inside the home page image should move to the top slightly slower than everything else.
-			home_page_pic_title.attr( 'data-0', 'margin-top: 270px;' );
-			home_page_pic_title.attr( 'data-700', 'margin-top: -100px;' );
-
-			// Fire skrollr
-			medicine_skrollr = skrollr.init({forceHeight: true, smoothScrolling: true});
-		} else {
-			// Remove classes used to set margins when Skrollr is active.
-			$('.skrollr-margin-section' ).removeClass('skrollr-margin-section');
-			$('.home-next-section' ).removeClass('home-next-section');
+		// On the homepage, setup the resize and scroll behavior for the featured image and its headline.
+		if ( $('.home' ).length > 0 ) {
+			watch_background();
+			$(window).resize(watch_background);
+			$(window ).scroll(watch_headline);
 		}
 
 		setup_graph_on_scroll();

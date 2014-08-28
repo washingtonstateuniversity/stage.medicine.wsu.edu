@@ -7,3 +7,73 @@
  Template:       spine
  Version:        0.7.3
 */
+
+.spine-blank-template .page {
+	position: relative;
+}
+
+.center {
+	margin: 0 auto;
+	padding-right: 0;
+	max-width: 75%;
+}
+
+.home .pic1 {
+	position: absolute;
+	top: 260px;
+	/*transition-property: top;
+	transition-duration: 1s;
+	transition-delay: 0s;*/
+}
+
+.home .pic1 .column {
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+}
+
+/* The sizing of the featured image on individual posts works
+   until a certain point, at which the H2 starts to distance
+   itself from the image. This will need to be targetted with
+   mobile styles. */
+.featured-image {
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: contain;
+	height: 350px;
+	width: 100%;
+}
+
+.home .featured-image {
+	background-size: contain;
+	background-position: 99px 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 700px;
+	width: 100%;
+}
+
+@media screen and (max-width: 791px) {
+	.home .featured-image {
+		background-position: 50% 0;
+	}
+}
+
+@media screen and (min-with: 1584px) {
+	.home .featured-image {
+		background-position: 50% 0;
+	}
+}
+
+@media screen and (max-width: 989px) {
+	#binder main {
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 791px) {
+	#binder main {
+		margin-top: 50px;
+	}
+}
