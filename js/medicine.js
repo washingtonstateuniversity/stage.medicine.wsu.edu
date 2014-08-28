@@ -1,17 +1,22 @@
 (function ($, window) {
-
 	var seats_scroll_point;
 	var states_scroll_point;
 	var current_window_width;
 	var current_scroll_position;
 	var featured_height;
+	var view_is_home = 0;
 
+	/**
+	 * Determine if this page view has the `home` class assigned to body.
+	 *
+	 * @returns bool True if home page, false if not.
+	 */
 	function is_home() {
-		if ( $('.home' ).length > 0 ) {
-			return true;
+		if ( 0 === view_is_home ) {
+			view_is_home = ( $('.home' ).length > 0 );
 		}
 
-		return false;
+		return view_is_home;
 	}
 
 	/**
