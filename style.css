@@ -220,18 +220,6 @@ sup {
 	height: 700px;
 }
 
-@media screen and (max-width: 791px) {
-	.featured-image {
-		background-position: 50% 49px;
-	}
-}
-
-@media screen and (min-with: 1584px) {
-	.home .featured-image {
-		background-position: 50% 0;
-	}
-}
-
 @media screen and (max-width: 989px) {
 	#binder main {
 		margin-top: 0;
@@ -241,6 +229,29 @@ sup {
 @media screen and (max-width: 791px) {
 	#binder main {
 		margin-top: 50px;
+	}
+}
+
+@media screen and (max-width: 791px) {
+	.featured-image {
+		background-position: 50% 49px;
+	}
+
+	h1 {
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 400px ) {
+	h1 {
+		font-size: 1.2rem;
+		margin-left: 0;
+	}
+}
+
+@media screen and (min-with: 1584px) {
+	.home .featured-image {
+		background-position: 50% 0;
 	}
 }
 
