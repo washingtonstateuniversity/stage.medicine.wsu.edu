@@ -1,12 +1,23 @@
 (function ($, window) {
-
-	var medicine_skrollr;
 	var seats_scroll_point;
 	var states_scroll_point;
 	var current_window_width;
 	var current_scroll_position;
-	var headline_top;
 	var featured_height;
+	var view_is_home = 0;
+
+	/**
+	 * Determine if this page view has the `home` class assigned to body.
+	 *
+	 * @returns bool True if home page, false if not.
+	 */
+	function is_home() {
+		if ( 0 === view_is_home ) {
+			view_is_home = ( $('.home' ).length > 0 );
+		}
+
+		return view_is_home;
+	}
 
 	/**
 	 * Setup our page view to look for either of our animated graphs and
@@ -68,17 +79,21 @@
 
 		var window_left = jQuery('#spine').offset().left + 198;
 		var window_right = Math.round( window_width - window_left );
-		featured_height = Math.round( window_right / 1.77 );
+
+		if ( is_home() ) {
+			featured_height = Math.round( window_right / 1.77 );
+		} else {
+			featured_height = Math.round( window_right / 3.15581854 ) + 30;
+		}
 
 		var image = $('.featured-image');
-		var headline = $('.pic1');
-
-		headline_top = Math.round( ( featured_height / 2 ) - ( headline.height() / 2 ) );
 
 		image.css('width', window_right + 'px' );
 		image.css('height', featured_height + 'px' );
-		headline.css('top', headline_top + 'px' );
-		watch_headline();
+
+		if ( is_home() ) {
+			watch_headline();
+		}
 	}
 
 	/**
@@ -111,6 +126,9 @@
 			watch_background();
 			$(window).resize(watch_background);
 			$(window ).scroll(watch_headline);
+		} else if ( $('.featured-image' ).length > 0 ) {
+			watch_background();
+			$(window ).resize(watch_background);
 		}
 
 		setup_graph_on_scroll();
