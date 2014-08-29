@@ -259,6 +259,18 @@ sup {
 	.h1-header {
 		margin-top: -68px;
 	}
+
+	.two {
+		margin-top: 1rem;
+	}
+
+	.small {
+		margin-left: 0;
+	}
+
+	.line-left {
+		margin-left: 0;
+	}
 }
 
 @media screen and (min-with: 1584px) {
