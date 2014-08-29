@@ -267,6 +267,10 @@ sup {
 	.small {
 		margin-left: 0;
 	}
+
+	.line-left {
+		margin-left: 0;
+	}
 }
 
 @media screen and (min-with: 1584px) {
