@@ -6,6 +6,10 @@
 	var featured_height;
 	var view_is_home = 0;
 	var window_width;
+	var main_replacement;
+	var main_replacement_content;
+	var footer_temp_header;
+	var replace_header;
 
 	/**
 	 * Determine if this page view has the `home` class assigned to body.
@@ -126,20 +130,96 @@
 		current_scroll_position = pos;
 	}
 
+	function navigate_next_page() {
+		var replacement_content = main_replacement_content.html();
+		var scroll_to = main_replacement.offset().top - 32;
+
+		jQuery('main' ).addClass('med-to-replace');
+
+		main_replacement.append(replacement_content);
+
+		footer_temp_header.replaceWith(replace_header);
+
+		jQuery('html,body' ).animate({ scrollTop: scroll_to }, 800, 'easeOutCubic', function(){
+			var replace_html = main_replacement.html();
+			jQuery('.med-to-replace' ).remove();
+			main_replacement.replaceWith( '<main class="spine-blank-template">' + replace_html + '</main>');
+			jQuery(document).scrollTop(0);
+			jQuery('.featured-image' ).css({'background-attachment':'','background-position':''});
+		});
+	}
+
+	function process_next_page_content( data ) {
+		/**
+		 * This is a DIV element where the replacement content will be inserted.
+		 * On load of the initial content, the featured image and headline exist.
+		 */
+		main_replacement = jQuery('#main-replacement');
+
+		/**
+		 * This is a hidden DIV element which is used to stage replacement content
+		 * before it is populated in the main_replacement container.
+		 */
+		main_replacement_content = jQuery('#main-replacement-content');
+
+		/**
+		 * Fill an empty and hidden container with the content received from the
+		 * WP-JSON api call.
+		 */
+		main_replacement_content.append(data.content);
+
+		/**
+		 * The replacement content has an H1 element in an h1-header section that will
+		 * first be used at the bottom of the page before transitioning to the primary
+		 * headline.
+		 */
+		var replacement_content_header = main_replacement_content.find('.h1-header');
+
+		/**
+		 * Make a copy of the header section so that we can repurpose it later after
+		 * the page has scrolled up.
+		 */
+		replace_header = replacement_content_header.clone();
+
+		/**
+		 * We capture a temporary version of the new header so that we can position it
+		 * via CSS when it needs to be absolutely positioned.
+		 */
+		footer_temp_header = replacement_content_header.find('.column h1');
+
+		footer_temp_header.addClass('med-footer-temp-header');
+
+
+		main_replacement.append(footer_temp_header);
+
+		replacement_content_header.remove();
+
+		main_replacement.on('click', navigate_next_page );
+	}
+
+	function load_next_page_content() {
+		if ( undefined === window.load_page_next_url ) {
+			return;
+		}
+
+		$.getJSON( window.load_page_next_url, process_next_page_content );
+	}
+
 	$(document).ready(function(){
 
 		// On the homepage, setup the resize and scroll behavior for the featured image and its headline.
 		if ( $('.home' ).length > 0 ) {
 			watch_background();
-			$(window).resize(watch_background);
-			$(window ).scroll(watch_headline);
+			$(window).on( 'resize', watch_background);
+			$(window ).on('scroll',watch_headline);
 		} else if ( $('.featured-image' ).length > 0 ) {
 			watch_background();
-			$(window ).resize(watch_background);
+			$(window ).on('resize',watch_background);
 		}
 
 		setup_graph_on_scroll();
 
+		load_next_page_content();
 	});
 
 }(jQuery, window));
