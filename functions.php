@@ -2,6 +2,7 @@
 
 include_once( __DIR__ . '/includes/medicine-county-data.php' );
 include_once( __DIR__ . '/includes/shortcodes.php' );
+include_once( __DIR__ . '/includes/load-page-next.php' );
 
 /**
  * Provide a cache breaking script version for the theme.
