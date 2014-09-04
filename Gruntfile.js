@@ -44,12 +44,18 @@ module.exports = function(grunt) {
 					'js/medicine-states-comparison.js'
 				]
 			}
+		},
+
+		watch: {
+			files: ['js/medicine.js'],
+			tasks: ['default']
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s).
 	grunt.registerTask('default', ['concat', 'uglify', 'clean']);
