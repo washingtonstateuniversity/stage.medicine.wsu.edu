@@ -146,15 +146,22 @@
 			main_replacement.replaceWith( '<main class="spine-blank-template">' + replace_html + '</main>');
 			jQuery(document).scrollTop(0);
 			jQuery('.featured-image' ).css({'background-attachment':'','background-position':''});
+			load_next_page_content();
 		});
 	}
 
 	function process_next_page_content( data ) {
+		var append_html = jQuery('#med-replacement-container' ).html();
+		jQuery('#med-replacement-container' ).remove();
+		jQuery('.spine-blank-template' ).after(append_html);
+
 		/**
 		 * This is a DIV element where the replacement content will be inserted.
 		 * On load of the initial content, the featured image and headline exist.
 		 */
 		main_replacement = jQuery('#main-replacement');
+
+		main_replacement.toggle();
 
 		/**
 		 * This is a hidden DIV element which is used to stage replacement content

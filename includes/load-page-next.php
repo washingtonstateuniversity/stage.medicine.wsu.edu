@@ -5,9 +5,9 @@ class WSU_Med_Load_Page_Next {
 	 * Setup hooks and filters.
 	 */
 	public function __construct() {
-		add_action( 'get_footer', array( $this, 'add_next_main_section' ) );
 		add_action( 'init', array( $this, 'setup' ) );
 		add_action( 'save_post', array( $this, 'save_post' ), 10, 2 );
+		add_filter( 'the_content', array( $this, 'add_next_page_content' ) );
 	}
 
 	/**
@@ -72,23 +72,28 @@ class WSU_Med_Load_Page_Next {
 		}
 	}
 
-	/**
-	 * Display the area of content that will contain the next page's featured
-	 * image and title at first, but will then become the container of all
-	 * content from the page as it slides up the screen.
-	 */
-	public function add_next_main_section() {
-		?>
-		<div id="main-replacement" class="spine-blank-template" style="margin-left: 198px; position:relative;">
-			<figure class="featured-image" style="width: 1295px; height: 410px; background-image: url(http://wp.wsu.dev/medicine/wp-content/uploads/sites/59/2014/08/spokane-campus1-1600x507.jpg); background-attachment:scroll; background-position: 0 0;">
-				<img width="1600" height="507" src="http://wp.wsu.dev/medicine/wp-content/uploads/sites/59/2014/08/spokane-campus1-1600x507.jpg" class="attachment-medicine-featured-image wp-post-image" alt="WSU Spokane Campus">
-			</figure>
-		</div>
-		<div id="main-replacement-content" style="display: none;"></div>
-		<script>
-			var load_page_next_url = 'http://wp.wsu.dev/medicine/wp-json/pages/why-wsu/';
-		</script>
-		<?php
+	public function add_next_page_content( $content ) {
+		$page_id = get_post_meta( get_the_ID(), '_med_page_load_next_id', true );
+
+		if ( 0 === absint( $page_id ) ) {
+			return $content;
+		}
+
+		$featured_image_src = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'medicine-featured-image' );
+		$next_page_url = home_url( '/wp-json/pages/' . $page_id );
+
+		$content .= '
+		<div id="med-replacement-container">
+			<div id="main-replacement" class="spine-blank-template" style="margin-left: 198px; position: relative; display: none;">
+				<figure class="featured-image" style="background-image: url(\'' . $featured_image_src[0] . '\'); background-attachment:scroll; background-position: 0 0;">
+					<img src="' . $featured_image_src[0] . '" \>
+				</figure>
+			</div>
+			<script> var load_page_next_url = "' . $next_page_url . '";	</script>
+			<div id="main-replacement-content" style="display:none;"></div>
+		</div>';
+
+		return $content;
 	}
 }
 new WSU_Med_Load_Page_Next();
