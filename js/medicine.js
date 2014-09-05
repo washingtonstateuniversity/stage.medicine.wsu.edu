@@ -361,12 +361,16 @@
 		// On the homepage, setup the resize and scroll behavior for the featured image and its headline.
 		if ( $('.home' ).length > 0 ) {
 			watch_background();
-			$(window).on( 'resize', watch_background);
-			$(window ).on('scroll',watch_headline);
+			if ( false === is_ios() ) {
+				$(window).on( 'resize', watch_background);
+				$(window ).on('scroll',watch_headline);
+			}
 		} else if ( $('.featured-image' ).length > 0 ) {
 			watch_background();
-			$(window ).on('resize',watch_background);
-			$(window ).on('scroll',handle_background_scroll);
+			if ( false === is_ios() ) {
+				$(window ).on('resize',watch_background);
+				$(window ).on('scroll',handle_background_scroll);
+			}
 		}
 
 		setup_graph_on_scroll();
