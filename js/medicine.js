@@ -1,5 +1,6 @@
 (function ($, window) {
 	var next_page_id;
+	var next_menu_id;
 	var seats_scroll_point;
 	var states_scroll_point;
 	var current_window_width;
@@ -161,6 +162,10 @@
 
 		footer_temp_header.replaceWith(replace_header);
 
+		// Change the active menu item.
+		jQuery('#spine-sitenav').find('.current').removeClass();
+		jQuery('#menu-item-' + next_menu_id ).addClass('current active dogeared');
+
 		jQuery('html body').animate({ scrollTop: scroll_to }, 800, 'easeOutCubic', function(){
 			/**
 			 * Use our replacement HTML to create a new MAIN element that is now the primary
@@ -287,6 +292,12 @@
 		if ( undefined === next_page_id ) {
 			return;
 		}
+
+		/**
+		 * Retrieve the next page's menu ID so that we can alter the active item in
+		 * the navigation menu.
+		 */
+		next_menu_id = replacement_container.data('next-menu-id');
 
 		/**
 		 * Grab a copy of the HTML inside the temporary container so that we can just

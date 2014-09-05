@@ -73,16 +73,26 @@ class WSU_Med_Load_Page_Next {
 	}
 
 	public function add_next_page_content( $content ) {
+		global $wpdb;
 		$page_id = get_post_meta( get_the_ID(), '_med_page_load_next_id', true );
 
 		if ( 0 === absint( $page_id ) ) {
 			return $content;
 		}
 
+		// Retrieve the menu ID of this page from the current nav menu if it exists
+		$menu_id = $wpdb->get_var( $wpdb->prepare( "SELECT post_id FROM {$wpdb->postmeta}  WHERE meta_key='_menu_item_object_id' AND meta_value = %d", $page_id ) );
+
+		if ( $menu_id && 0 !== absint( $menu_id ) ) {
+			$menu_id = absint( $menu_id );
+		} else {
+			$menu_id = '';
+		}
+
 		$featured_image_src = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'medicine-featured-image' );
 
 		$content .= '
-		<div class="med-replacement-container" data-next-id="' . $page_id . '">
+		<div class="med-replacement-container" data-next-id="' . $page_id . '" data-next-menu-id="' . $menu_id . '">
 			<div id="main-replacement-' . $page_id . '" class="spine-blank-template" style="margin-left: 198px; position: relative; display: none;">
 				<figure class="featured-image replacement-featured-image" style="background-image: url(\'' . $featured_image_src[0] . '\');">
 					<img src="' . $featured_image_src[0] . '" \>
