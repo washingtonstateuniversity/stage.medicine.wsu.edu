@@ -205,9 +205,9 @@ sup {
    mobile styles. */
 .featured-image {
 	background-size: contain;
-	background-position: 99px 0;
+	background-position: 0 0;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background-attachment: scroll;
 	height: 350px;
 	width: 100%;
 }
