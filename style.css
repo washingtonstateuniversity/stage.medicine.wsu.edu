@@ -68,10 +68,6 @@ body {
 	display: none;
 }
 
-.page {
-	padding-bottom: 100px;
-}
-
 .home .h1-header {
 	margin-top: 0;
 }
@@ -209,11 +205,16 @@ sup {
    mobile styles. */
 .featured-image {
 	background-size: contain;
-	background-position: 99px 0;
+	background-position: 0 0;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background-attachment: scroll;
 	height: 350px;
 	width: 100%;
+}
+
+.replacement-featured-image {
+	background-attachment: scroll;
+	background-position: 0 0;
 }
 
 .home .featured-image {
@@ -481,4 +482,10 @@ sup {
 	font-weight: normal;
 	display: block;
 	padding: 2px;
+}
+
+.med-footer-temp-header {
+	position: absolute;
+	bottom: 0;
+	left: 30px;
 }
