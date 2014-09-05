@@ -80,17 +80,15 @@ class WSU_Med_Load_Page_Next {
 		}
 
 		$featured_image_src = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'medicine-featured-image' );
-		$next_page_url = home_url( '/wp-json/pages/' . $page_id );
 
 		$content .= '
-		<div id="med-replacement-container">
-			<div id="main-replacement" class="spine-blank-template" style="margin-left: 198px; position: relative; display: none;">
-				<figure class="featured-image" style="background-image: url(\'' . $featured_image_src[0] . '\'); background-attachment:scroll; background-position: 0 0;">
+		<div class="med-replacement-container" data-next-id="' . $page_id . '">
+			<div id="main-replacement-' . $page_id . '" class="spine-blank-template" style="margin-left: 198px; position: relative; display: none;">
+				<figure class="featured-image replacement-featured-image" style="background-image: url(\'' . $featured_image_src[0] . '\');">
 					<img src="' . $featured_image_src[0] . '" \>
 				</figure>
 			</div>
-			<script> var load_page_next_url = "' . $next_page_url . '";	</script>
-			<div id="main-replacement-content" style="display:none;"></div>
+			<div id="main-replacement-content-' . $page_id . '" style="display:none;"></div>
 		</div>';
 
 		return $content;

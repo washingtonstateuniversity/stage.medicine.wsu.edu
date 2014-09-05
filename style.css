@@ -212,6 +212,11 @@ sup {
 	width: 100%;
 }
 
+.replacement-featured-image {
+	background-attachment: scroll;
+	background-position: 99px 0;
+}
+
 .home .featured-image {
 	height: 700px;
 }
