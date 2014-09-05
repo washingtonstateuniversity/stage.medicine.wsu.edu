@@ -174,10 +174,11 @@
 		jQuery('#spine-sitenav').find('.current').removeClass();
 		jQuery('#menu-item-' + next_menu_id ).addClass('current active dogeared');
 
+		// Update the browser window's title.
 		document.title = replace_title + document.title.substr(document.title.indexOf(' |'));
 
-		var stateObj = { slug: replace_slug };
-		history.pushState(stateObj, '', replace_url);
+		// Add a record to browser history for navigation.
+		history.pushState({slug:replace_slug}, '', replace_url);
 
 		jQuery('html body').animate({ scrollTop: scroll_to }, 800, 'easeOutCubic', function(){
 			/**
@@ -249,8 +250,14 @@
 		 */
 		replace_title = data.title;
 
+		/**
+		 * Retrieve the URL of the next page to be placed in the location bar.
+		 */
 		replace_url = data.link;
 
+		/**
+		 * Retrieve the slug of the next page to act as an identifier in state history.
+		 */
 		replace_slug = data.slug;
 
 		/**
