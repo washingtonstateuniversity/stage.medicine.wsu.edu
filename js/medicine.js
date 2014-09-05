@@ -27,6 +27,10 @@
 		return view_is_home;
 	}
 
+	function is_ios() {
+		return ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
+	}
+
 	/**
 	 * Setup our page view to look for either of our animated graphs and
 	 * attach scroll handlers to them if found.
@@ -374,8 +378,10 @@
 		load_next_page_content();
 	});
 
-	window.onpopstate = function(event) {
+	if ( false === is_ios() ) {
+		window.onpopstate = function(event) {
 			location.reload();
+		}
 	}
 
 }(jQuery, window));

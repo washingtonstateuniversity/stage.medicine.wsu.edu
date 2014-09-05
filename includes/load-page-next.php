@@ -93,7 +93,7 @@ class WSU_Med_Load_Page_Next {
 
 		$content .= '
 		<div class="med-replacement-container" data-next-id="' . $page_id . '" data-next-menu-id="' . $menu_id . '">
-			<div id="main-replacement-' . $page_id . '" class="spine-blank-template" style="margin-left: 198px; position: relative; display: none;">
+			<div id="main-replacement-' . $page_id . '" class="spine-blank-template main-replacement" style="display:none;">
 				<figure class="featured-image replacement-featured-image" style="background-image: url(\'' . $featured_image_src[0] . '\');">
 					<img src="' . $featured_image_src[0] . '" \>
 				</figure>
