@@ -184,6 +184,9 @@
 		// Add a record to browser history for navigation.
 		history.pushState({slug:replace_slug}, '', replace_url);
 
+		var wsu_twitter_share_text = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent( document.title ) + '&url=' + encodeURIComponent( replace_url ) + '&via=wsupullman';
+		$('#wsu-share .by-twitter a' ).attr( 'href', wsu_twitter_share_text );
+
 		jQuery('html body').animate({ scrollTop: scroll_to }, 800, 'easeOutCubic', function(){
 			/**
 			 * Use our replacement HTML to create a new MAIN element that is now the primary
@@ -358,15 +361,22 @@
 
 	$(document).ready(function(){
 
+		var wsu_twitter_share_text = 'https://twitter.com/intent/tweet?text=' + wsu_medicine.share_text + '&url=' + wsu_medicine.share_url + '&via=wsupullman';
+		$('#wsu-share .by-twitter a' ).attr( 'href', wsu_twitter_share_text );
+
 		// On the homepage, setup the resize and scroll behavior for the featured image and its headline.
 		if ( $('.home' ).length > 0 ) {
 			watch_background();
-			$(window).on( 'resize', watch_background);
-			$(window ).on('scroll',watch_headline);
+			if ( false === is_ios() ) {
+				$(window).on( 'resize', watch_background);
+				$(window ).on('scroll',watch_headline);
+			}
 		} else if ( $('.featured-image' ).length > 0 ) {
 			watch_background();
-			$(window ).on('resize',watch_background);
-			$(window ).on('scroll',handle_background_scroll);
+			if ( false === is_ios() ) {
+				$(window ).on('resize',watch_background);
+				$(window ).on('scroll',handle_background_scroll);
+			}
 		}
 
 		setup_graph_on_scroll();
@@ -376,6 +386,7 @@
 
 		// Fire the JSON request to load the next page's data if we're expecting.
 		load_next_page_content();
+
 	});
 
 	if ( false === is_ios() ) {
