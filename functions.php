@@ -10,7 +10,7 @@ include_once( __DIR__ . '/includes/load-page-next.php' );
  * @return string Current script version
  */
 function wsu_medicine_script_version() {
-	return spine_get_script_version() . '0.9.3';
+	return spine_get_script_version() . '0.10.0';
 }
 
 add_action( 'wp_footer', 'wsu_medicine_sharing_footer' );
