@@ -107,6 +107,12 @@
 		}
 	}
 
+	function handle_background_scroll() {
+		var pos = $(window ).scrollTop();
+		console.log( pos );
+		jQuery('#med-primary-content .featured-image:first' ).css('background-position', '0 ' + pos + 'px');
+	}
+
 	/**
 	 * Watch the headline area's position when scrolling so that it always moves
 	 * with the position of the viewport.
@@ -332,6 +338,7 @@
 		} else if ( $('.featured-image' ).length > 0 ) {
 			watch_background();
 			$(window ).on('resize',watch_background);
+			$(window ).on('scroll',handle_background_scroll);
 		}
 
 		setup_graph_on_scroll();
