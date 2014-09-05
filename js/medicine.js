@@ -11,6 +11,8 @@
 	var footer_temp_header;
 	var replace_header;
 	var replace_title;
+	var replace_url;
+	var replace_slug;
 
 	/**
 	 * Determine if this page view has the `home` class assigned to body.
@@ -174,6 +176,9 @@
 
 		document.title = replace_title + document.title.substr(document.title.indexOf(' |'));
 
+		var stateObj = { slug: replace_slug };
+		history.pushState(stateObj, '', replace_url);
+
 		jQuery('html body').animate({ scrollTop: scroll_to }, 800, 'easeOutCubic', function(){
 			/**
 			 * Use our replacement HTML to create a new MAIN element that is now the primary
@@ -243,6 +248,10 @@
 		 * title on navigation later.
 		 */
 		replace_title = data.title;
+
+		replace_url = data.link;
+
+		replace_slug = data.slug;
 
 		/**
 		 * We capture a temporary version of the new header so that we can position it
@@ -357,5 +366,11 @@
 		// Fire the JSON request to load the next page's data if we're expecting.
 		load_next_page_content();
 	});
+
+	window.onpopstate = function(event) {
+		if(event && event.state) {
+			location.reload();
+		}
+	}
 
 }(jQuery, window));
