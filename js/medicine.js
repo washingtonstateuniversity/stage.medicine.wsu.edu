@@ -368,9 +368,7 @@
 	});
 
 	window.onpopstate = function(event) {
-		if(event && event.state) {
 			location.reload();
-		}
 	}
 
 }(jQuery, window));
