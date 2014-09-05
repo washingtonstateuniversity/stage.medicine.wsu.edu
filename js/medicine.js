@@ -289,8 +289,8 @@
 		if ( undefined === next_page_id ) {
 			return;
 		}
-		// @todo This URL should be dynamic and provided by the page
-		$.getJSON( 'http://wp.wsu.dev/medicine/wp-json/pages/' + next_page_id + '/', process_next_page_content );
+
+		$.getJSON( wsu_medicine.json_url + 'pages/' + next_page_id + '/', process_next_page_content );
 	}
 
 	/**

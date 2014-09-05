@@ -40,7 +40,9 @@ function wsu_medicine_setup_image_sizes() {
 add_action( 'wp_enqueue_scripts', 'wsu_medicine_enqueue_scripts', 11 );
 function wsu_medicine_enqueue_scripts() {
 	wp_enqueue_script( 'skrollr', get_stylesheet_directory_uri() . '/js/skrollr.min.js', array( 'jquery' ), wsu_medicine_script_version(), false );
-	wp_enqueue_script( 'wsu-medicine', get_stylesheet_directory_uri() . '/js/medicine.min.js', array( 'skrollr' ), wsu_medicine_script_version(), true );
+	wp_register_script( 'wsu-medicine', get_stylesheet_directory_uri() . '/js/medicine.min.js', array( 'skrollr' ), wsu_medicine_script_version(), true );
+	wp_localize_script( 'wsu-medicine', 'wsu_medicine', array( 'json_url' => esc_url( home_url( 'wp-json/' ) ) ) );
+	wp_enqueue_script( 'wsu-medicine' );
 }
 
 add_action( 'spine_enqueue_styles', 'wsu_medicine_enqueue_styles', 10 );
