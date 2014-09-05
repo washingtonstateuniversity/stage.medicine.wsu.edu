@@ -238,6 +238,12 @@ sup {
 	}
 }
 
+@media screen and (max-width:989px), only screen and (max-device-width:1024px) and (orientation:portrait) {
+	#binder main {
+		margin-top: 0;
+	}
+}
+
 @media screen and (max-width: 791px) {
 	.featured-image {
 		background-position: 0 0;
