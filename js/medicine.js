@@ -10,6 +10,7 @@
 	var window_width;
 	var footer_temp_header;
 	var replace_header;
+	var replace_title;
 
 	/**
 	 * Determine if this page view has the `home` class assigned to body.
@@ -109,7 +110,6 @@
 
 	function handle_background_scroll() {
 		var pos = $(window ).scrollTop();
-		console.log( pos );
 		jQuery('#med-primary-content .featured-image:first' ).css('background-position', '0 ' + pos + 'px');
 	}
 
@@ -171,6 +171,8 @@
 		// Change the active menu item.
 		jQuery('#spine-sitenav').find('.current').removeClass();
 		jQuery('#menu-item-' + next_menu_id ).addClass('current active dogeared');
+
+		document.title = replace_title + document.title.substr(document.title.indexOf(' |'));
 
 		jQuery('html body').animate({ scrollTop: scroll_to }, 800, 'easeOutCubic', function(){
 			/**
@@ -235,6 +237,12 @@
 		 * the page has scrolled up. This is stored in the wider namespace for reuse.
 		 */
 		replace_header = replacement_content_header.clone();
+
+		/**
+		 * Retrieve the title of the next page so that we can change the browser window's
+		 * title on navigation later.
+		 */
+		replace_title = data.title;
 
 		/**
 		 * We capture a temporary version of the new header so that we can position it
