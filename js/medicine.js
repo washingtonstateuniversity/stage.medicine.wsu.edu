@@ -195,7 +195,13 @@
 		var wsu_twitter_share_text = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent( document.title ) + '&url=' + encodeURIComponent( replace_url ) + '&via=wsupullman';
 		$('#wsu-share .by-twitter a' ).attr( 'href', wsu_twitter_share_text );
 
-		jQuery('html body').animate({ scrollTop: scroll_to }, 800, 'easeOutCubic', function(){
+		// Animate on both HTML and BODY - Firefox requires HTML, Chrome and Safari require BODY - @todo IE?
+		jQuery('html,body').animate({ scrollTop: scroll_to }, 800, 'easeOutCubic', function(){
+			// To avoid our callback firing twice, only act on BODY. Acting on HTML works only for Firefox.
+			if (this.nodeName == "HTML") {
+				return;
+			}
+
 			/**
 			 * Use our replacement HTML to create a new MAIN element that is now the primary
 			 * content container for this page view.
