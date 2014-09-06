@@ -223,6 +223,7 @@ sup {
 .main-replacement {
 	margin-left: 198px;
 	position: relative;
+	margin-top: 5rem;
 }
 
 @media screen and (max-width: 989px) {
