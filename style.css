@@ -68,7 +68,7 @@ body {
 	display: none;
 }
 
-.home .h1-header {
+.pic1 .h1-header {
 	margin-top: 0;
 }
 
@@ -82,7 +82,7 @@ h1 {
 	display: inline;
 }
 
-.home h1 {
+.pic1 h1 {
 	padding: 0 0 5px;
 	color: #fff;
 	background-color: #981e32;
@@ -140,6 +140,10 @@ em {
 
 .home .two {
 	margin-top: 0;
+}
+
+.main-replacement .two {
+	margin-top: 8em;
 }
 
 sup {
@@ -203,6 +207,7 @@ sup {
    until a certain point, at which the H2 starts to distance
    itself from the image. This will need to be targeted with
    mobile styles. */
+.home-featured-image,
 .featured-image {
 	background-size: contain;
 	background-position: 0 0;
@@ -217,7 +222,7 @@ sup {
 	background-position: 0 0;
 }
 
-.home .featured-image {
+.home-featured-image {
 	height: 700px;
 }
 
@@ -296,7 +301,7 @@ sup {
 }
 
 @media screen and (min-with: 1584px) {
-	.home .featured-image {
+	.home-featured-image {
 		background-position: 50% 0;
 	}
 }
