@@ -509,3 +509,34 @@ sup {
 	bottom: 0;
 	left: 30px;
 }
+
+.h1-header {
+	margin-bottom: 20px;
+}
+
+.two {
+	margin-top: 8em;
+}
+
+.no-marg .two {
+	margin-top: 3em;
+}
+
+.two p {
+	font-size: .75em;
+	color: #757575;
+	margin-left: 7em;
+}
+
+.intro {
+	padding-top: 1em;
+}
+
+.line-left {
+	margin: 20px 0 40px 40px;
+}
+
+img {
+	padding: 0 15px 15px 0;
+	float: left;
+}
