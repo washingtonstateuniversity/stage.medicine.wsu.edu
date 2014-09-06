@@ -177,6 +177,7 @@
 		}
 
 		$('#med-primary-content' ).addClass('med-to-replace');
+		$('.replacement-featured-image' ).css('background-position', '0 0');
 
 		main_replacement.append(replacement_content);
 
