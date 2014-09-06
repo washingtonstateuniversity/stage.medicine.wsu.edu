@@ -404,7 +404,9 @@
 
 	if ( false === is_ios() ) {
 		window.onpopstate = function(event) {
-			location.reload();
+			if ( event.state ) {
+				location.reload();
+			}
 		}
 	}
 
