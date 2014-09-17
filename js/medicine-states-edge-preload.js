@@ -62,4 +62,4 @@ preContent={dom: [ ]};//simpleContent
 
 dlContent={dom: [ ]};//simpleContent
 
-})( "EDGE-12611226");
+})( "wa_mi_comparison");

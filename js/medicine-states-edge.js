@@ -572,4 +572,4 @@ var opts = {
 
 Edge.registerCompositionDefn(compId, symbols, fonts, resources, opts);
 
-})(jQuery, AdobeEdge, "EDGE-12611226");
+})(jQuery, AdobeEdge, "wa_mi_comparison");
