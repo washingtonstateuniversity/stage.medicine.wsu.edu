@@ -234,7 +234,7 @@ var opts = {
 					{
 						id: 'five_ninety_five',
 						type: 'text',
-						rect: ['76px', '68px','auto','auto','auto', 'auto'],
+						rect: ['76px', '94px','auto','auto','auto', 'auto'],
 						text: "595",
 						align: "left",
 						font: ['"Open Sans Condensed", sans-serif', 50, "rgba(255,255,255,1.00)", "200", "none", "normal"]
@@ -280,7 +280,7 @@ var opts = {
 					{
 						id: 'one_twenty',
 						type: 'text',
-						rect: ['604px', '374px','auto','auto','auto', 'auto'],
+						rect: ['604px', '396px','auto','auto','auto', 'auto'],
 						text: "120",
 						align: "left",
 						font: ['"Open Sans Condensed", sans-serif', 50, "rgba(255,255,255,1)", "200", "none", "normal"]
@@ -429,7 +429,7 @@ var opts = {
 					],
 					"${_one_twenty}": [
 						["style", "left", '604px'],
-						["style", "top", '374px']
+						["style", "top", '396px']
 					],
 					"${_mi_pop_text}": [
 						["style", "top", '277px'],
@@ -450,7 +450,7 @@ var opts = {
 					],
 					"${_five_ninety_five}": [
 						["color", "color", 'rgba(255,255,255,0)'],
-						["style", "top", '68px'],
+						["style", "top", '94px'],
 						["style", "left", '76px'],
 						["style", "font-size", '50px']
 					],
