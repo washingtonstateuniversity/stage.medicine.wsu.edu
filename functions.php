@@ -35,9 +35,3 @@ function wsu_medicine_enqueue_scripts() {
 	wp_localize_script( 'wsu-medicine', 'wsu_medicine', $data );
 	wp_enqueue_script( 'wsu-medicine' );
 }
-
-add_action( 'spine_enqueue_styles', 'wsu_medicine_enqueue_styles', 10 );
-function wsu_medicine_enqueue_styles() {
-	wp_dequeue_style( 'wsu-spine-opensans' );
-	wp_enqueue_style( 'med-open-sans', 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,700', array(), false );
-}
