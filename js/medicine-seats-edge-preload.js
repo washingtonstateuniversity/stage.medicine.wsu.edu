@@ -56,7 +56,7 @@ if(!AdobeEdge.yepnope) {
 
 	loadResources(aLoader, doDelayLoad);
 
-	var plSTF="width",ctrPlS="horizontal",minPlW="0",maxPlW=undefined,plWidth="1188px",plHeight="400px";
+	var plSTF="none",ctrPlS="none",minPlW="0",maxPlW=undefined,plWidth="1368px",plHeight="400px";
 
 	preContent={dom: [ ]};//simpleContent
 
