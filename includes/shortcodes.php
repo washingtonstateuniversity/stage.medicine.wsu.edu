@@ -53,7 +53,7 @@ class WSU_Medicine_Shortcodes {
 	 */
 	public function display_wsu_medicine_seats_comparison() {
 		// Output the DIV element expected by the Edge script
-		$output = '<div id="seats_comparison_container" style="height: 300px;">
+		$output = '<div id="seats_comparison_container" style="height: 325px;">
 				<div id="Stage_comparison" class="EDGE-21518124" style="height: 250px;"></div>
 			</div>';
 

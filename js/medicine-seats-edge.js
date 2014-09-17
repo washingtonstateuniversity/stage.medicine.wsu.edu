@@ -121,7 +121,7 @@
 					{
 						id: 'onesixty',
 						type: 'text',
-						rect: ['233px', '90px','auto','auto','auto', 'auto'],
+						rect: ['233px', '102px','auto','auto','auto', 'auto'],
 						text: "160",
 						align: "left",
 						font: ['"Open Sans", sans-serif', 36, "rgba(167,169,171,1.00)", "400", "none", "normal"]
@@ -145,7 +145,7 @@
 					{
 						id: 'fourty',
 						type: 'text',
-						rect: ['244px', '220px','auto','auto','auto', 'auto'],
+						rect: ['244px', '235px','auto','auto','auto', 'auto'],
 						text: "40",
 						align: "left",
 						font: ['"Open Sans", sans-serif', 36, "rgba(167,169,171,1)", "400", "none", "normal"]
@@ -169,7 +169,7 @@
 					{
 						id: 'one_twenty',
 						type: 'text',
-						rect: ['1102px', '287px','auto','auto','auto', 'auto'],
+						rect: ['1102px', '299px','auto','auto','auto', 'auto'],
 						text: "120",
 						align: "left",
 						font: ['"Open Sans", sans-serif', 36, "rgba(167,169,171,1)", "400", "none", "normal"]
@@ -193,7 +193,7 @@
 					{
 						id: 'onetwenty',
 						type: 'text',
-						rect: ['1103px', '163px','auto','auto','auto', 'auto'],
+						rect: ['1103px', '174px','auto','auto','auto', 'auto'],
 						text: "120",
 						align: "left",
 						font: ['"Open Sans", sans-serif', 36, "rgba(167,169,171,1)", "400", "none", "normal"]
@@ -296,7 +296,7 @@
 			states: {
 				"Base State": {
 					"${_one_twenty}": [
-						["style", "top", '287px'],
+						["style", "top", '299px'],
 						["style", "left", '1102px']
 					],
 					"${_additional_text}": [
@@ -320,7 +320,7 @@
 						["style", "border-width", '2px']
 					],
 					"${_onesixty}": [
-						["style", "top", '90px'],
+						["style", "top", '102px'],
 						["color", "color", 'rgba(167,169,171,1.00)'],
 						["style", "left", '233px'],
 						["style", "font-size", '36px']
@@ -370,7 +370,7 @@
 					],
 					"${_fourty}": [
 						["style", "left", '244px'],
-						["style", "top", '220px']
+						["style", "top", '235px']
 					],
 					"${_remaining_a_wipe}": [
 						["style", "height", '16px'],
@@ -489,7 +489,7 @@
 					],
 					"${_onetwenty}": [
 						["style", "left", '1103px'],
-						["style", "top", '163px']
+						["style", "top", '174px']
 					],
 					"${_remaining_text}": [
 						["style", "top", '83px'],
