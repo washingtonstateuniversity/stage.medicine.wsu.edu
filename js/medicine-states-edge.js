@@ -92,7 +92,7 @@ var opts = {
 						type: 'text',
 						rect: ['217px', '277px','auto','auto','auto', 'auto'],
 						text: "9,895,622",
-						font: ['open-sans-condensed, sans-serif', 17, "rgba(128,128,128,1.00)", "normal", "none", ""]
+						font: ['"Open Sans Condensed", sans-serif', 17, "rgba(128,128,128,1.00)", "normal", "none", ""]
 					},
 					{
 						id: 'mi_sq_text',
@@ -100,7 +100,7 @@ var opts = {
 						rect: ['177px', '356px','auto','auto','auto', 'auto'],
 						text: "96,713.51",
 						align: "left",
-						font: ['open-sans-condensed, sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
+						font: ['"Open Sans Condensed", sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
 					},
 					{
 						id: 'mi_gsp_text',
@@ -108,7 +108,7 @@ var opts = {
 						rect: ['243px', '436px','auto','auto','auto', 'auto'],
 						text: "368,401",
 						align: "left",
-						font: ['open-sans-condensed, sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
+						font: ['"Open Sans Condensed", sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
 					},
 					{
 						id: 'wa_pop_text',
@@ -116,7 +116,7 @@ var opts = {
 						rect: ['467px', '276px','auto','auto','auto', 'auto'],
 						text: "6,971,406",
 						align: "left",
-						font: ['open-sans-condensed, sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
+						font: ['"Open Sans Condensed", sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
 					},
 					{
 						id: 'wa_sq_text',
@@ -124,7 +124,7 @@ var opts = {
 						rect: ['507px', '356px','auto','auto','auto', 'auto'],
 						text: "71,297.95",
 						align: "left",
-						font: ['open-sans-condensed, sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
+						font: ['"Open Sans Condensed", sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
 					},
 					{
 						id: 'wa_gsp_text',
@@ -132,7 +132,7 @@ var opts = {
 						rect: ['453px', '436px','auto','auto','auto', 'auto'],
 						text: "338,334",
 						align: "left",
-						font: ['open-sans-condensed, sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
+						font: ['"Open Sans Condensed", sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
 					},
 					{
 						id: 'pop_line',
@@ -161,7 +161,7 @@ var opts = {
 						rect: ['336px', '252px','auto','auto','auto', 'auto'],
 						text: "Population",
 						align: "left",
-						font: ['open-sans-condensed, sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
+						font: ['"Open Sans Condensed", sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
 					},
 					{
 						id: 'sq_miles_text',
@@ -169,7 +169,7 @@ var opts = {
 						rect: ['340px', '332px','auto','auto','auto', 'auto'],
 						text: "Sq. Miles",
 						align: "left",
-						font: ['open-sans-condensed, sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
+						font: ['"Open Sans Condensed", sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
 					},
 					{
 						id: 'gsp_text',
@@ -177,7 +177,7 @@ var opts = {
 						rect: ['358px', '412px','auto','auto','auto', 'auto'],
 						text: "GSP",
 						align: "left",
-						font: ['open-sans-condensed, sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
+						font: ['"Open Sans Condensed", sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
 					},
 					{
 						id: 'mi_text',
@@ -185,7 +185,7 @@ var opts = {
 						rect: ['228px', '96px','auto','auto','auto', 'auto'],
 						text: "MICHIGAN",
 						align: "left",
-						font: ['open-sans-condensed, sans-serif', 35, "rgba(42,47,50,1.00)", "200", "none", "normal"]
+						font: ['"Open Sans Condensed", sans-serif', 35, "rgba(42,47,50,1.00)", "200", "none", "normal"]
 					},
 					{
 						id: 'seperator',
@@ -193,7 +193,7 @@ var opts = {
 						rect: ['361px', '83px','auto','auto','auto', 'auto'],
 						text: "|",
 						align: "left",
-						font: ['open-sans-condensed, sans-serif', 50, "rgba(42,47,50,1)", "200", "none", "normal"]
+						font: ['"Open Sans Condensed", sans-serif', 50, "rgba(42,47,50,1)", "200", "none", "normal"]
 					},
 					{
 						id: 'wa_text',
@@ -201,7 +201,7 @@ var opts = {
 						rect: ['394px', '96px','auto','auto','auto', 'auto'],
 						text: "WASHINGTON",
 						align: "left",
-						font: ['open-sans-condensed, sans-serif', 35, "rgba(42,47,50,1)", "200", "none", "normal"]
+						font: ['"Open Sans Condensed", sans-serif', 35, "rgba(42,47,50,1)", "200", "none", "normal"]
 					},
 					{
 						id: 'mi_total_seats_container',
@@ -237,7 +237,7 @@ var opts = {
 						rect: ['76px', '68px','auto','auto','auto', 'auto'],
 						text: "595",
 						align: "left",
-						font: ['open-sans-condensed, sans-serif', 50, "rgba(255,255,255,1.00)", "200", "none", "normal"]
+						font: ['"Open Sans Condensed", sans-serif', 50, "rgba(255,255,255,1.00)", "200", "none", "normal"]
 					},
 					{
 						id: 'total_in_state_seats',
@@ -245,7 +245,7 @@ var opts = {
 						rect: ['278px', '528px','auto','auto','auto', 'auto'],
 						text: "Total In-State Seats",
 						align: "left",
-						font: ['open-sans-condensed, sans-serif', 30, "rgba(0,153,204,1.00)", "200", "none", "normal"]
+						font: ['"Open Sans Condensed", sans-serif', 30, "rgba(0,153,204,1.00)", "200", "none", "normal"]
 					},
 					{
 						id: 'total_wa_horiz',
@@ -283,7 +283,7 @@ var opts = {
 						rect: ['604px', '374px','auto','auto','auto', 'auto'],
 						text: "120",
 						align: "left",
-						font: ['open-sans-condensed, sans-serif', 50, "rgba(255,255,255,1)", "200", "none", "normal"]
+						font: ['"Open Sans Condensed", sans-serif', 50, "rgba(255,255,255,1)", "200", "none", "normal"]
 					}],
 				symbolInstances: [
 
@@ -434,7 +434,7 @@ var opts = {
 					"${_mi_pop_text}": [
 						["style", "top", '277px'],
 						["color", "color", 'rgba(128,128,128,1)'],
-						["style", "font-family", 'open-sans-condensed, sans-serif'],
+						["style", "font-family", '"Open Sans Condensed", sans-serif'],
 						["style", "left", '217px'],
 						["style", "font-size", '17px']
 					],
