@@ -1,6 +1,6 @@
 {
 	"name": "wsu-medicine",
-	"version": "0.10.7",
+	"version": "1.0.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/washingtonstateuniversity/stage.medicine.wsu.edu"
