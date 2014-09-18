@@ -373,18 +373,18 @@
 						["style", "top", '235px']
 					],
 					"${_remaining_a_wipe}": [
-						["style", "height", '16px'],
+						["style", "height", '21px'],
 						["style", "top", '101px'],
 						["style", "left", '21px'],
 						["style", "width", '189px']
 					],
 					"${_remaining_q_wipe}": [
-						["style", "top", '79px'],
+						["style", "top", '83px'],
 						["style", "left", '21px'],
 						["style", "width", '189px']
 					],
 					"${_additional_wsu_seats_q_wipe}": [
-						["style", "top", '164px'],
+						["style", "top", '170px'],
 						["style", "left", '1193px'],
 						["style", "width", '141px']
 					],
@@ -427,7 +427,7 @@
 						["style", "width", '0px']
 					],
 					"${_additional_wwami_q_wipe}": [
-						["style", "top", '222px'],
+						["style", "top", '225px'],
 						["style", "left", '21px'],
 						["style", "width", '189px']
 					],
@@ -473,7 +473,7 @@
 						["style", "width", '0px']
 					],
 					"${_additional_wsu_a_wipe}": [
-						["style", "top", '190px'],
+						["style", "top", '195px'],
 						["style", "left", '1193px'],
 						["style", "width", '141px']
 					],
@@ -530,13 +530,13 @@
 						["style", "left", '1089px']
 					],
 					"${_remaining_z_wipe}": [
-						["style", "top", '124px'],
+						["style", "top", '131px'],
 						["style", "height", '16px'],
 						["style", "left", '21px'],
 						["style", "width", '189px']
 					],
 					"${_additional_wwami_a_wipe}": [
-						["style", "top", '248px'],
+						["style", "top", '253px'],
 						["style", "left", '21px'],
 						["style", "width", '189px']
 					]
