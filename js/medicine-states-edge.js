@@ -28,12 +28,6 @@ var opts = {
 			content: {
 				dom: [
 					{
-						id: 'wa',
-						type: 'image',
-						rect: ['420px', '163px','297px','194px','auto', 'auto'],
-						fill: ["rgba(0,0,0,0)",im+"Pasted.svg",'0px','0px']
-					},
-					{
 						id: 'mi',
 						type: 'image',
 						rect: ['12px', '51px','359px','342px','auto', 'auto'],
