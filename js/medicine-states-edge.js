@@ -295,7 +295,7 @@ var opts = {
 				"Base State": {
 					"${_one_twenty}": [
 						["style", "left", '604px'],
-						["style", "top", '374px']
+						["style", "top", '396px']
 					],
 					"${_top_left_pop}": [
 						["color", "background-color", 'rgba(255,255,255,1.00)'],
@@ -441,7 +441,7 @@ var opts = {
 						["transform", "rotateZ", '-176deg']
 					],
 					"${_five_ninety_five}": [
-						["style", "top", '68px'],
+						["style", "top", '93px'],
 						["transform", "rotateZ", '0deg'],
 						["color", "color", 'rgba(255,255,255,0)'],
 						["style", "left", '76px'],
