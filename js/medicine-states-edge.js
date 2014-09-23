@@ -92,7 +92,7 @@ var opts = {
 						type: 'text',
 						rect: ['217px', '277px','auto','auto','auto', 'auto'],
 						text: "9,895,622",
-						font: ['"Open Sans Condensed", sans-serif', 17, "rgba(128,128,128,1.00)", "normal", "none", ""]
+						font: ['"Open Sans", sans-serif', 12, "rgba(128,128,128,1.00)", "normal", "none", ""]
 					},
 					{
 						id: 'mi_sq_text',
@@ -100,7 +100,7 @@ var opts = {
 						rect: ['177px', '356px','auto','auto','auto', 'auto'],
 						text: "96,713.51",
 						align: "left",
-						font: ['"Open Sans Condensed", sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
+						font: ['"Open Sans", sans-serif', 12, "rgba(128,128,128,1)", "400", "none", "normal"]
 					},
 					{
 						id: 'mi_gsp_text',
@@ -108,7 +108,7 @@ var opts = {
 						rect: ['243px', '436px','auto','auto','auto', 'auto'],
 						text: "368,401",
 						align: "left",
-						font: ['"Open Sans Condensed", sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
+						font: ['"Open Sans", sans-serif', 12, "rgba(128,128,128,1)", "400", "none", "normal"]
 					},
 					{
 						id: 'wa_pop_text',
@@ -116,7 +116,7 @@ var opts = {
 						rect: ['467px', '276px','auto','auto','auto', 'auto'],
 						text: "6,971,406",
 						align: "left",
-						font: ['"Open Sans Condensed", sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
+						font: ['"Open Sans", sans-serif', 12, "rgba(128,128,128,1)", "400", "none", "normal"]
 					},
 					{
 						id: 'wa_sq_text',
@@ -124,7 +124,7 @@ var opts = {
 						rect: ['507px', '356px','auto','auto','auto', 'auto'],
 						text: "71,297.95",
 						align: "left",
-						font: ['"Open Sans Condensed", sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
+						font: ['"Open Sans", sans-serif', 12, "rgba(128,128,128,1)", "400", "none", "normal"]
 					},
 					{
 						id: 'wa_gsp_text',
@@ -132,7 +132,7 @@ var opts = {
 						rect: ['453px', '436px','auto','auto','auto', 'auto'],
 						text: "338,334",
 						align: "left",
-						font: ['"Open Sans Condensed", sans-serif', 17, "rgba(128,128,128,1)", "400", "none", "normal"]
+						font: ['"Open Sans", sans-serif', 12, "rgba(128,128,128,1)", "400", "none", "normal"]
 					},
 					{
 						id: 'pop_line',
@@ -161,7 +161,7 @@ var opts = {
 						rect: ['336px', '252px','auto','auto','auto', 'auto'],
 						text: "Population",
 						align: "left",
-						font: ['"Open Sans Condensed", sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
+						font: ['"Open Sans", sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
 					},
 					{
 						id: 'sq_miles_text',
@@ -169,7 +169,7 @@ var opts = {
 						rect: ['340px', '332px','auto','auto','auto', 'auto'],
 						text: "Sq. Miles",
 						align: "left",
-						font: ['"Open Sans Condensed", sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
+						font: ['"Open Sans", sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
 					},
 					{
 						id: 'gsp_text',
@@ -177,7 +177,7 @@ var opts = {
 						rect: ['358px', '412px','auto','auto','auto', 'auto'],
 						text: "GSP",
 						align: "left",
-						font: ['"Open Sans Condensed", sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
+						font: ['"Open Sans", sans-serif', 20, "rgba(42,48,51,1.00)", "400", "none", "normal"]
 					},
 					{
 						id: 'mi_text',
@@ -185,7 +185,7 @@ var opts = {
 						rect: ['228px', '96px','auto','auto','auto', 'auto'],
 						text: "MICHIGAN",
 						align: "left",
-						font: ['"Open Sans Condensed", sans-serif', 35, "rgba(42,47,50,1.00)", "200", "none", "normal"]
+						font: ['"Open Sans", sans-serif', 25, "rgba(42,47,50,1.00)", "200", "none", "normal"]
 					},
 					{
 						id: 'seperator',
@@ -193,7 +193,7 @@ var opts = {
 						rect: ['361px', '83px','auto','auto','auto', 'auto'],
 						text: "|",
 						align: "left",
-						font: ['"Open Sans Condensed", sans-serif', 50, "rgba(42,47,50,1)", "200", "none", "normal"]
+						font: ['"Open Sans", sans-serif', 30, "rgba(42,47,50,1)", "200", "none", "normal"]
 					},
 					{
 						id: 'wa_text',
@@ -201,7 +201,7 @@ var opts = {
 						rect: ['394px', '96px','auto','auto','auto', 'auto'],
 						text: "WASHINGTON",
 						align: "left",
-						font: ['"Open Sans Condensed", sans-serif', 35, "rgba(42,47,50,1)", "200", "none", "normal"]
+						font: ['"Open Sans", sans-serif', 25, "rgba(42,47,50,1)", "200", "none", "normal"]
 					},
 					{
 						id: 'mi_total_seats_container',
@@ -239,7 +239,7 @@ var opts = {
 						rect: ['76px', '94px','auto','auto','auto', 'auto'],
 						text: "595",
 						align: "left",
-						font: ['"Open Sans Condensed", sans-serif', 50, "rgba(255,255,255,1.00)", "200", "none", "normal"]
+						font: ['"Open Sans", sans-serif', 40, "rgba(255,255,255,1.00)", "200", "none", "normal"]
 					},
 					{
 						id: 'total_in_state_seats',
@@ -247,7 +247,7 @@ var opts = {
 						rect: ['278px', '528px','auto','auto','auto', 'auto'],
 						text: "Total In-State Seats",
 						align: "left",
-						font: ['"Open Sans Condensed", sans-serif', 30, "rgba(0,153,204,1.00)", "200", "none", "normal"]
+						font: ['"Open Sans", sans-serif', 20, "rgba(0,153,204,1.00)", "200", "none", "normal"]
 					},
 					{
 						id: 'total_wa_horiz',
@@ -285,7 +285,7 @@ var opts = {
 						rect: ['604px', '396px','auto','auto','auto', 'auto'],
 						text: "120",
 						align: "left",
-						font: ['"Open Sans Condensed", sans-serif', 50, "rgba(255,255,255,1)", "200", "none", "normal"]
+						font: ['"Open Sans", sans-serif', 40, "rgba(255,255,255,1)", "200", "none", "normal"]
 					}],
 				symbolInstances: [
 
@@ -294,7 +294,7 @@ var opts = {
 			states: {
 				"Base State": {
 					"${_one_twenty}": [
-						["style", "left", '604px'],
+						["style", "left", '600px'],
 						["style", "top", '396px']
 					],
 					"${_top_left_pop}": [
@@ -325,15 +325,15 @@ var opts = {
 						["style", "width", '136px']
 					],
 					"${_seperator}": [
-						["style", "top", '83px'],
-						["style", "left", '361px'],
-						["style", "font-size", '50px']
+						["style", "top", '95px'],
+						["style", "left", '368px'],
+						["style", "font-size", '30px']
 					],
 					"${_total_in_state_seats}": [
 						["color", "color", 'rgba(0,153,204,1.00)'],
 						["style", "top", '528px'],
 						["style", "left", '278px'],
-						["style", "font-size", '30px']
+						["style", "font-size", '22px']
 					],
 					"${_pop_line}": [
 						["color", "background-color", 'rgba(180,180,180,1)'],
@@ -345,12 +345,12 @@ var opts = {
 					"${_mi_pop_text}": [
 						["style", "top", '277px'],
 						["color", "color", 'rgba(128,128,128,1)'],
-						["style", "font-family", '"Open Sans Condensed", sans-serif'],
-						["style", "left", '217px'],
-						["style", "font-size", '17px']
+						["style", "font-family", '"Open Sans", sans-serif'],
+						["style", "left", '220px'],
+						["style", "font-size", '12px']
 					],
 					"${_mi_sq_text}": [
-						["style", "left", '177px'],
+						["style", "left", '179px'],
 						["style", "top", '356px']
 					],
 					"${_total_wa_horiz}": [
@@ -383,8 +383,8 @@ var opts = {
 						["style", "top", '96px'],
 						["color", "color", 'rgba(42,47,50,1.00)'],
 						["style", "font-weight", '200'],
-						["style", "left", '228px'],
-						["style", "font-size", '35px']
+						["style", "left", '235px'],
+						["style", "font-size", '25px']
 					],
 					"${_mid_left_sq}": [
 						["color", "background-color", 'rgba(255,255,255,1.00)'],
@@ -425,13 +425,13 @@ var opts = {
 						["style", "width", '70px']
 					],
 					"${_wa_gsp_text}": [
-						["style", "left", '453px'],
+						["style", "left", '455px'],
 						["style", "top", '436px']
 					],
 					"${_pop_text}": [
 						["style", "top", '252px'],
 						["color", "color", 'rgba(42,48,51,1)'],
-						["style", "left", '336px'],
+						["style", "left", '330px'],
 						["style", "font-size", '20px']
 					],
 					"${_wa_total_seats_container}": [
@@ -444,8 +444,8 @@ var opts = {
 						["style", "top", '93px'],
 						["transform", "rotateZ", '0deg'],
 						["color", "color", 'rgba(255,255,255,0)'],
-						["style", "left", '76px'],
-						["style", "font-size", '50px']
+						["style", "left", '72px'],
+						["style", "font-size", '40px']
 					],
 					"${_gsp_text}": [
 						["style", "top", '412px'],
@@ -454,11 +454,11 @@ var opts = {
 						["style", "font-size", '20px']
 					],
 					"${_mi_gsp_text}": [
-						["style", "left", '243px'],
+						["style", "left", '246px'],
 						["style", "top", '436px']
 					],
 					"${_wa_sq_text}": [
-						["style", "left", '507px'],
+						["style", "left", '510px'],
 						["style", "top", '356px']
 					],
 					"${_sq_line}": [
@@ -470,7 +470,7 @@ var opts = {
 					],
 					"${_wa_pop_text}": [
 						["style", "top", '276px'],
-						["style", "left", '467px']
+						["style", "left", '470px']
 					],
 					"${_Stage}": [
 						["color", "background-color", 'rgba(255,255,255,1)'],
@@ -531,9 +531,8 @@ var opts = {
 					],
 					"${_wa_text}": [
 						["style", "top", '96px'],
-						["style", "font-size", '35px'],
-						["style", "left", '394px'],
-						["transform", "rotateZ", '0deg']
+						["style", "font-size", '25px'],
+						["style", "left", '400px'],
 					]
 				}
 			},
