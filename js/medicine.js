@@ -122,11 +122,6 @@
 		}
 	}
 
-	function handle_background_scroll() {
-		var pos = $(window ).scrollTop();
-		jQuery('#med-primary-content .featured-image:first' ).css('background-position', '0 ' + pos + 'px');
-	}
-
 	/**
 	 * Watch the headline area's position when scrolling so that it always moves
 	 * with the position of the viewport.
@@ -383,21 +378,7 @@
 		var wsu_twitter_share_text = 'https://twitter.com/intent/tweet?text=' + wsu_medicine.share_text + '&url=' + wsu_medicine.share_url + '&via=wsupullman';
 		$('#wsu-share .by-twitter a' ).attr( 'href', wsu_twitter_share_text );
 
-		// On the homepage, setup the resize and scroll behavior for the featured image and its headline.
-		if ( $('.home' ).length > 0 ) {
-			watch_background();
-			if ( false === is_ios() ) {
-				$(window).on( 'resize', watch_background);
-				$(window ).on('scroll',handle_background_scroll);
-				$(window ).on('scroll',watch_headline);
-			}
-		} else if ( $('.featured-image' ).length > 0 ) {
-			watch_background();
-			if ( false === is_ios() ) {
-				$(window ).on('resize',watch_background);
-				$(window ).on('scroll',handle_background_scroll);
-			}
-		}
+		watch_background();
 
 		setup_graph_on_scroll();
 
