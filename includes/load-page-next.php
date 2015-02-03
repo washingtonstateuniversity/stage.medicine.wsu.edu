@@ -7,7 +7,7 @@ class WSU_Med_Load_Page_Next {
 	public function __construct() {
 		add_action( 'init', array( $this, 'setup' ) );
 		add_action( 'save_post', array( $this, 'save_post' ), 10, 2 );
-		add_filter( 'the_content', array( $this, 'add_next_page_content' ) );
+		//add_filter( 'the_content', array( $this, 'add_next_page_content' ) );
 	}
 
 	/**
