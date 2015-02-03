@@ -383,10 +383,10 @@
 		setup_graph_on_scroll();
 
 		// Stage an initial next page content area from hidden elements in main page content.
-		stage_content_area();
+		// stage_content_area();
 
 		// Fire the JSON request to load the next page's data if we're expecting.
-		load_next_page_content();
+		// load_next_page_content();
 
 	});
 
