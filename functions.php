@@ -10,7 +10,7 @@ include_once( __DIR__ . '/includes/load-page-next.php' );
  * @return string Current script version
  */
 function wsu_medicine_script_version() {
-	return spine_get_script_version() . '1.0.4';
+	return spine_get_script_version() . '1.1.2';
 }
 
 add_action( 'after_setup_theme', 'wsu_medicine_setup_image_sizes', 10 );
